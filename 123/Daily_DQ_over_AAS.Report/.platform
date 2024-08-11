@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Daily_DQ_over_AAS"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "dfe8493e-da0e-458d-b678-9d960a1a725d"
+  }
+}

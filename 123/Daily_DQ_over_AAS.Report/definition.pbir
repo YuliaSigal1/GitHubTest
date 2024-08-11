@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Daily_DQ_over_AAS.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

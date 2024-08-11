@@ -1,0 +1,14 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": null,
+    "byConnection": {
+      "connectionString": "Data Source=powerbi://onebox-redirect.analysis.windows-int.net/v1.0/myorg/test1;Initial Catalog=ParamsUsageV3;Integrated Security=ClaimsToken",
+      "pbiServiceModelId": null,
+      "pbiModelVirtualServerName": "sobe_wowvirtualserver",
+      "pbiModelDatabaseName": "e6d7c724-59f2-458e-b9ce-2f170865226f",
+      "name": "EntityDataSource",
+      "connectionType": "pbiServiceXmlaStyleLive"
+    }
+  }
+}

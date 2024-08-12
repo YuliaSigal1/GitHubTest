@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../All visual types&#32;.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

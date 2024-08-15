@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.9\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY17SU12\",\"version\":\"3.18\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true}}",
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY17SU12\",\"version\":\"3.18\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"allowChangeFilterTypes\":true,\"useEnhancedTooltips\":true}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {

@@ -1,0 +1,30 @@
+table SQL2012TM_EffectiveUserName
+	lineageTag: df55d5f0-5c37-4dbb-a2b3-638ecb15ad02
+
+	column [USERNAME_RESULT]
+		dataType: string
+		lineageTag: 6501c479-1f5c-46aa-91e6-0243642fecba
+		summarizeBy: none
+		sourceColumn: [USERNAME_RESULT]
+
+		annotation SummarizationSetBy = Automatic
+
+	column [CUSTOMDATA_RESULT]
+		dataType: int64
+		formatString: 0
+		lineageTag: c98a94a7-e70a-4c40-bcfe-1285c149bdaf
+		summarizeBy: none
+		sourceColumn: [CUSTOMDATA_RESULT]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SQL2012TM_EffectiveUserName-243a871d-719d-41c4-a97b-0b3bb0780283 = m
+		mode: import
+		source =
+				let
+				    Source = AnalysisServices.Database("pbiegw\SQL2012TM", "advworks", [Query="EVALUATE ROW (""USERNAME_RESULT"", USERNAME(), ""CUSTOMDATA_RESULT"", CUSTOMDATA())"])
+				in
+				    Source
+
+	annotation PBI_ResultType = Exception
+

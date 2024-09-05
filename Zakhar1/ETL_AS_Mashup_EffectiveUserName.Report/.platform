@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "ETL_AS_Mashup_EffectiveUserName"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6eef8e6f-1174-4b61-8b7b-bbcfaf93d12d"
+  }
+}

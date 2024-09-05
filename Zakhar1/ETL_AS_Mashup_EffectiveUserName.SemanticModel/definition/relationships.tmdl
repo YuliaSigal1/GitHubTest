@@ -1,0 +1,15 @@
+relationship 605d3b49-8845-4556-97f5-595349d1b6b8
+	crossFilteringBehavior: bothDirections
+	fromColumn: Mashup_EffectiveUserName.[USERNAME_RESULT]
+	toColumn: SQL2016SUPERDAX_EffectiveUserName.[USERNAME_RESULT]
+
+relationship 61078e92-ff18-4260-9753-9e082dbcebd3
+	crossFilteringBehavior: bothDirections
+	fromColumn: Mashup_EffectiveUserName.[USERNAME_RESULT]
+	toColumn: SQL2012TM_EffectiveUserName.[USERNAME_RESULT]
+
+relationship cee380e2-880c-4ae2-b7c7-f2f1f6f13f88
+	crossFilteringBehavior: bothDirections
+	fromColumn: Mashup_EffectiveUserName.[USERNAME_RESULT]
+	toColumn: SQL2014DMD_EffectiveUserName.[USERNAME_RESULT]
+

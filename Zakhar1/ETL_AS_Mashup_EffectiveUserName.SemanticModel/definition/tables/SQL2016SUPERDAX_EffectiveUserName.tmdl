@@ -1,0 +1,30 @@
+table SQL2016SUPERDAX_EffectiveUserName
+	lineageTag: 6fec5068-da14-4a34-9cb5-3f3ad4b9966d
+
+	column [USERNAME_RESULT]
+		dataType: string
+		lineageTag: e563f6a7-2b72-4fac-85fd-0769a211adfb
+		summarizeBy: none
+		sourceColumn: [USERNAME_RESULT]
+
+		annotation SummarizationSetBy = Automatic
+
+	column [CUSTOMDATA_RESULT]
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c616cdf-4e2e-4623-b6c1-be7abcd9a8cf
+		summarizeBy: none
+		sourceColumn: [CUSTOMDATA_RESULT]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SQL2016SUPERDAX_EffectiveUserName-c8552a91-1ec5-4f31-9be5-46f34c1961c9 = m
+		mode: import
+		source =
+				let
+				    Source = AnalysisServices.Database("pbiegw\SQL2016SUPERDAX", "advworks", [Query="EVALUATE ROW (""USERNAME_RESULT"", USERNAME(), ""CUSTOMDATA_RESULT"", CUSTOMDATA())"])
+				in
+				    Source
+
+	annotation PBI_ResultType = Exception
+

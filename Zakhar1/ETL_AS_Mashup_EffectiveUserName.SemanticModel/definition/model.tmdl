@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.124.1052.0 (23.12)
+
+annotation PBI_QueryOrder = ["SQL2016SUPERDAX_EffectiveUserName","SQL2012TM_EffectiveUserName","SQL2014DMD_EffectiveUserName","Mashup_EffectiveUserName"]
+
+ref table DateTableTemplate_304aeee1-9bdd-48a8-8164-519ec19508f3
+ref table SQL2016SUPERDAX_EffectiveUserName
+ref table SQL2012TM_EffectiveUserName
+ref table SQL2014DMD_EffectiveUserName
+ref table Mashup_EffectiveUserName
+
+ref cultureInfo en-US
+

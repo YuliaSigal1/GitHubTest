@@ -1,0 +1,31 @@
+table Mashup_EffectiveUserName
+	lineageTag: 68362af6-fa5b-497e-9c20-1abe5118b4a0
+
+	column [USERNAME_RESULT]
+		dataType: string
+		lineageTag: 5caffda2-6fe1-4a3c-8dda-2da69ee1801a
+		summarizeBy: none
+		sourceColumn: [USERNAME_RESULT]
+
+		annotation SummarizationSetBy = Automatic
+
+	column [CUSTOMDATA_RESULT]
+		dataType: int64
+		formatString: 0
+		lineageTag: 042ccc0d-5e17-4144-b6f3-bee79583081a
+		summarizeBy: sum
+		sourceColumn: [CUSTOMDATA_RESULT]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Mashup_EffectiveUserName-4d68c2f0-0474-4f53-a219-dd927ec6ca39 = m
+		mode: import
+		source =
+				let
+				    Source = AnalysisServices.Database("pbiegw\SQL2016SUPERDAX", "advworks", [Query="EVALUATE ROW (""USERNAME_RESULT"", USERNAME(), ""CUSTOMDATA_RESULT"", CUSTOMDATA())"]),
+				    #"Appended Query" = Table.Combine({Source, SQL2012TM_EffectiveUserName, SQL2014DMD_EffectiveUserName})
+				in
+				    #"Appended Query"
+
+	annotation PBI_ResultType = Exception
+

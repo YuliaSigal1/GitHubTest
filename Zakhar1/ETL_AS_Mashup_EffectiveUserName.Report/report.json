@@ -1,0 +1,50 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{},\"activeSectionIndex\":0,\"linguisticSchemaSyncVersion\":2}",
+  "layoutOptimization": 0,
+  "resourcePackages": [],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"VisualContainer\",\"layouts\":[{\"id\":0,\"position\":{\"x\":572.7487821851079,\"y\":475.6576200417537,\"z\":0,\"width\":704.5789839944329,\"height\":243.8552540013918}}],\"singleVisual\":{\"visualType\":\"table\",\"projections\":{\"Values\":[{\"queryRef\":\"Mashup_EffectiveUserName.[USERNAME_RESULT]\"},{\"queryRef\":\"CountNonNull(Mashup_EffectiveUserName.[USERNAME_RESULT])\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Mashup_EffectiveUserName\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"[USERNAME_RESULT]\"},\"Name\":\"Mashup_EffectiveUserName.[USERNAME_RESULT]\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"[USERNAME_RESULT]\"}},\"Function\":5},\"Name\":\"CountNonNull(Mashup_EffectiveUserName.[USERNAME_RESULT])\"}]},\"objects\":{\"general\":[{\"properties\":{\"totals\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"autoSizeColumnWidth\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{},\"selector\":{\"metadata\":\"Mashup_EffectiveUserName.[USERNAME_RESULT]\"}}]}}}",
+          "height": 243.86,
+          "width": 704.58,
+          "x": 572.75,
+          "y": 475.66,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"VisualContainer1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":583.4377174669451,\"y\":130.04871259568546,\"z\":1000,\"width\":693.8900487125958,\"height\":110.45233124565067}}],\"singleVisual\":{\"visualType\":\"table\",\"projections\":{\"Values\":[{\"queryRef\":\"SQL2016SUPERDAX_EffectiveUserName.[USERNAME_RESULT]\"},{\"queryRef\":\"CountNonNull(SQL2016SUPERDAX_EffectiveUserName.[USERNAME_RESULT])\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"SQL2016SUPERDAX_EffectiveUserName\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"[USERNAME_RESULT]\"},\"Name\":\"SQL2016SUPERDAX_EffectiveUserName.[USERNAME_RESULT]\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"[USERNAME_RESULT]\"}},\"Function\":5},\"Name\":\"CountNonNull(SQL2016SUPERDAX_EffectiveUserName.[USERNAME_RESULT])\"}]}}}",
+          "height": 110.45,
+          "width": 693.89,
+          "x": 583.44,
+          "y": 130.05,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"VisualContainer2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":578.9839944328462,\"y\":340.26443980514966,\"z\":2000,\"width\":698.3437717466945,\"height\":132.72094641614476}}],\"singleVisual\":{\"visualType\":\"table\",\"projections\":{\"Values\":[{\"queryRef\":\"SQL2014DMD_EffectiveUserName.[USERNAME_RESULT]\"},{\"queryRef\":\"CountNonNull(SQL2014DMD_EffectiveUserName.[USERNAME_RESULT])\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"SQL2014DMD_EffectiveUserName\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"[USERNAME_RESULT]\"},\"Name\":\"SQL2014DMD_EffectiveUserName.[USERNAME_RESULT]\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"[USERNAME_RESULT]\"}},\"Function\":5},\"Name\":\"CountNonNull(SQL2014DMD_EffectiveUserName.[USERNAME_RESULT])\"}]}}}",
+          "height": 132.72,
+          "width": 698.34,
+          "x": 578.98,
+          "y": 340.26,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"VisualContainer3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":574.5302713987475,\"y\":243.17327766179542,\"z\":3000,\"width\":702.7974947807934,\"height\":93.52818371607516}}],\"singleVisual\":{\"visualType\":\"table\",\"projections\":{\"Values\":[{\"queryRef\":\"SQL2012TM_EffectiveUserName.[USERNAME_RESULT]\"},{\"queryRef\":\"CountNonNull(SQL2012TM_EffectiveUserName.[USERNAME_RESULT])\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"SQL2012TM_EffectiveUserName\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"[USERNAME_RESULT]\"},\"Name\":\"SQL2012TM_EffectiveUserName.[USERNAME_RESULT]\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"[USERNAME_RESULT]\"}},\"Function\":5},\"Name\":\"CountNonNull(SQL2012TM_EffectiveUserName.[USERNAME_RESULT])\"}]}}}",
+          "height": 93.53,
+          "width": 702.80,
+          "x": 574.53,
+          "y": 243.17,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+table 'Lead Management Flow'
+	lineageTag: 0add803a-04fe-421d-b0d3-835bdcaa0fd6
+
+	column ID
+		dataType: string
+		lineageTag: 832285e2-3ad3-4898-9306-48c2784cf174
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Targets
+		dataType: int64
+		formatString: 0
+		lineageTag: d7387ce1-6923-4ec1-a504-d5f948c5ffdb
+		summarizeBy: sum
+		sourceColumn: Targets
+
+		annotation SummarizationSetBy = Automatic
+
+	column Actuals
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a4dd176-492f-4fd5-83e9-9b4c489855cd
+		summarizeBy: sum
+		sourceColumn: Actuals
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gap
+		dataType: double
+		lineageTag: c0f8295e-1aad-426c-b1fb-8cc4570dcf82
+		summarizeBy: sum
+		sourceColumn: Gap
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Lead Management Flow-b9a995bb-58dc-40b4-8733-9f4779323c14' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("XdCxbsMgEIDhV0HMUQTENOlaS50apVWyWRlO9tU6lWKLQKW8fY2P2Gq9MPjj56Bp5CUQOHGm3qdRbqRW0zetz7yorZbXTSNPoQdP7eos/7fKMlPsjhC+MJLvxcuQfJeDRepqoU8zfQ/0A+1d1MP36Ah8i1npopUp56v9v/BHAkefhDl+YF0ZbWdcMa4HH6GN4ojrwKaEbekaO9M38B12grw4g8PbVMeUB9mzqx7PUMoXdMhyfYPdY9QdX+yV0HULMsv1NaO1U4NzeT8Lc/h749M4DiEmT/HO8/CJHJkq118=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [ID = _t, Targets = _t, Actuals = _t, Gap = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"ID", type text}, {"Targets", Int64.Type}, {"Actuals", Int64.Type}, {"Gap", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

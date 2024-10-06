@@ -1,0 +1,226 @@
+table DimDate
+	lineageTag: 52216dc3-1fb1-4c24-9e8e-bfe065dfb27d
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9824e3d9-7e5a-4d02-9462-f6f06f90ab0b
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column FullDateAlternateKey
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 560136b1-95f2-4994-b68f-2ccdd9c5ed73
+		summarizeBy: none
+		sourceColumn: FullDateAlternateKey
+
+		variation Variation
+			isDefault
+			relationship: bb39fdc4-98a1-4f0f-95a6-8cb8169cf012
+			defaultHierarchy: LocalDateTable_6868f90f-9eec-4a93-a398-1e8e51d5051f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="1033" Group="LongDate" FormatString="dddd, MMMM d, yyyy" /></DateTimes></Format>
+
+	column DayNumberOfWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: bdff9808-a095-4c42-a71f-751312d39cc3
+		summarizeBy: sum
+		sourceColumn: DayNumberOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column EnglishDayNameOfWeek
+		dataType: string
+		lineageTag: a9e6e9c2-8591-4523-a6ac-c30f0fd8ed4e
+		summarizeBy: none
+		sourceColumn: EnglishDayNameOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column SpanishDayNameOfWeek
+		dataType: string
+		lineageTag: 38d7d349-b487-4757-aa8f-c8f42b2455e5
+		summarizeBy: none
+		sourceColumn: SpanishDayNameOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column FrenchDayNameOfWeek
+		dataType: string
+		lineageTag: e713e5c3-11fd-40be-8d18-fca6e62f20c6
+		summarizeBy: none
+		sourceColumn: FrenchDayNameOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column DayNumberOfMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: a0c1b20c-a387-4644-9559-6f9c0c094c67
+		summarizeBy: sum
+		sourceColumn: DayNumberOfMonth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column DayNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 959dd3af-2480-41b1-890c-edada31760e7
+		summarizeBy: sum
+		sourceColumn: DayNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column WeekNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: e00e466a-2217-4b35-b892-ecc19e3abc04
+		summarizeBy: sum
+		sourceColumn: WeekNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column EnglishMonthName
+		dataType: string
+		lineageTag: 57d9f832-c394-4020-9bc4-b7ba24e36817
+		summarizeBy: none
+		sourceColumn: EnglishMonthName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column SpanishMonthName
+		dataType: string
+		lineageTag: 186b867e-284a-44dc-b9eb-35a2cf8bbfa6
+		summarizeBy: none
+		sourceColumn: SpanishMonthName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column FrenchMonthName
+		dataType: string
+		lineageTag: d83b1bbd-3d59-4888-b768-fb54d065a845
+		summarizeBy: none
+		sourceColumn: FrenchMonthName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column MonthNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: b0d71161-3f37-42a3-b670-05e68490f68d
+		summarizeBy: sum
+		sourceColumn: MonthNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column CalendarQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 30f0225a-11a1-4dfd-b47d-66ef380ad081
+		summarizeBy: sum
+		sourceColumn: CalendarQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 421e3a38-3b2d-4c71-87ca-33eb6521c9e6
+		summarizeBy: sum
+		sourceColumn: CalendarYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column CalendarSemester
+		dataType: int64
+		formatString: 0
+		lineageTag: a5174c1c-27b0-45e8-8fd1-e5f5a27bbc8e
+		summarizeBy: sum
+		sourceColumn: CalendarSemester
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column FiscalQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: e78e7dfc-85c7-4ed3-a3fd-b3a15a2e027c
+		summarizeBy: sum
+		sourceColumn: FiscalQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 80b3bbba-dda1-4687-9ad5-343fbfe903dd
+		summarizeBy: sum
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column FiscalSemester
+		dataType: int64
+		formatString: 0
+		lineageTag: 92afc81d-1f15-43f0-8aa2-9b26badf4356
+		summarizeBy: sum
+		sourceColumn: FiscalSemester
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	partition DimDate-4ba66c69-3cb4-48b9-8b74-d92cbae624d5 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("jxkt4xphz2.database.windows.net", "Adventure Works DW Tabular Denali CTP3"),
+				    dbo_DimDate = Source{[Schema="dbo",Item="DimDate"]}[Data]
+				in
+				    dbo_DimDate
+
+	annotation PBI_QueryRelationships = {"columnCount":19,"keyColumnNames":["DateKey"],"queryRelationships":[{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactCallCenter.{DateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactCurrencyRate.{DateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactFinance.{DateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactInternetSales.{DueDateKey,2}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactInternetSales.{OrderDateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactInternetSales.{ShipDateKey,3}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":1,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactProductInventory.{DateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactResellerSales.{DueDateKey,2}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactResellerSales.{OrderDateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactResellerSales.{ShipDateKey,3}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactSalesQuota.{DateKey,2}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactSurveyResponse.{DateKey,1}","KeyColumnCount":1}],"columnIdentities":["Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{DateKey,0}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FullDateAlternateKey,1}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{DayNumberOfWeek,2}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{EnglishDayNameOfWeek,3}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{SpanishDayNameOfWeek,4}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FrenchDayNameOfWeek,5}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{DayNumberOfMonth,6}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{DayNumberOfYear,7}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{WeekNumberOfYear,8}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{EnglishMonthName,9}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{SpanishMonthName,10}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FrenchMonthName,11}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{MonthNumberOfYear,12}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{CalendarQuarter,13}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{CalendarYear,14}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{CalendarSemester,15}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FiscalQuarter,16}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FiscalYear,17}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FiscalSemester,18}"],"ColumnCount":19,"KeyColumnNames":["DateKey"],"ColumnIdentities":["Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{DateKey,0}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FullDateAlternateKey,1}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{DayNumberOfWeek,2}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{EnglishDayNameOfWeek,3}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{SpanishDayNameOfWeek,4}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FrenchDayNameOfWeek,5}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{DayNumberOfMonth,6}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{DayNumberOfYear,7}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{WeekNumberOfYear,8}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{EnglishMonthName,9}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{SpanishMonthName,10}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FrenchMonthName,11}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{MonthNumberOfYear,12}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{CalendarQuarter,13}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{CalendarYear,14}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{CalendarSemester,15}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FiscalQuarter,16}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FiscalYear,17}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimDate.{FiscalSemester,18}"],"RelationshipInfo":[{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactCallCenter.{DateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactCurrencyRate.{DateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactFinance.{DateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactInternetSales.{DueDateKey,2}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactInternetSales.{OrderDateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactInternetSales.{ShipDateKey,3}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":1,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactProductInventory.{DateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactResellerSales.{DueDateKey,2}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactResellerSales.{OrderDateKey,1}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactResellerSales.{ShipDateKey,3}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactSalesQuota.{DateKey,2}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactSurveyResponse.{DateKey,1}","KeyColumnCount":1}]}
+
+	annotation PBI_ResultType = Table
+

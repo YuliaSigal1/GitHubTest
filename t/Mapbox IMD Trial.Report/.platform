@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Mapbox IMD Trial"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "77e31b1e-0977-4fee-a659-0e88fe97b01f"
+  }
+}

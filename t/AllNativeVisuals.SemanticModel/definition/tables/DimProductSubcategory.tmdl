@@ -1,0 +1,79 @@
+table DimProductSubcategory
+	lineageTag: 2bfbbdc1-eb02-4a30-bd14-d6f7c63f5551
+
+	column ProductSubcategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 5327032b-5f98-498a-ab22-e218c315738c
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column ProductSubcategoryAlternateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 77748b47-25cb-42eb-abcb-4901e1473c5e
+		summarizeBy: count
+		sourceColumn: ProductSubcategoryAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column EnglishProductSubcategoryName
+		dataType: string
+		lineageTag: 3779f81f-82e7-4cd6-bd56-44a967e01e3c
+		summarizeBy: none
+		sourceColumn: EnglishProductSubcategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column SpanishProductSubcategoryName
+		dataType: string
+		lineageTag: b7ccde03-c657-4431-b107-f389d69fc62a
+		summarizeBy: none
+		sourceColumn: SpanishProductSubcategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column FrenchProductSubcategoryName
+		dataType: string
+		lineageTag: 086d57a4-b104-4830-a4e1-68b7ad7d20cd
+		summarizeBy: none
+		sourceColumn: FrenchProductSubcategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column ProductCategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 0debf6c0-eed1-4d34-a805-dab25a4207e8
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	partition DimProductSubcategory-419a8a0b-8961-4b07-8ee3-d1bc8565bd1b = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("jxkt4xphz2.database.windows.net", "Adventure Works DW Tabular Denali CTP3"),
+				    dbo_DimProductSubcategory = Source{[Schema="dbo",Item="DimProductSubcategory"]}[Data]
+				in
+				    dbo_DimProductSubcategory
+
+	annotation PBI_QueryRelationships = {"columnCount":6,"keyColumnNames":["ProductSubcategoryKey"],"queryRelationships":[{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ProductSubcategoryKey,2}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":5,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductCategory.{ProductCategoryKey,0}","KeyColumnCount":1}],"columnIdentities":["Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{ProductSubcategoryKey,0}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{ProductSubcategoryAlternateKey,1}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{EnglishProductSubcategoryName,2}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{SpanishProductSubcategoryName,3}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{FrenchProductSubcategoryName,4}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{ProductCategoryKey,5}"],"ColumnCount":6,"KeyColumnNames":["ProductSubcategoryKey"],"ColumnIdentities":["Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{ProductSubcategoryKey,0}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{ProductSubcategoryAlternateKey,1}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{EnglishProductSubcategoryName,2}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{SpanishProductSubcategoryName,3}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{FrenchProductSubcategoryName,4}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{ProductCategoryKey,5}"],"RelationshipInfo":[{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ProductSubcategoryKey,2}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":5,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductCategory.{ProductCategoryKey,0}","KeyColumnCount":1}]}
+
+	annotation PBI_ResultType = Table
+

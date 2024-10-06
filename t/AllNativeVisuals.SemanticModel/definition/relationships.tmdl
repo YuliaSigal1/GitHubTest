@@ -1,0 +1,74 @@
+relationship 19d60776-e718-4a4d-935e-d47bb5cb6762
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimCustomer.BirthDate
+	toColumn: LocalDateTable_554e4f8c-d466-42b7-be78-43c92e02eaf2.Date
+
+relationship 4b12dcb7-f9a3-4b14-930c-b85cda8d427b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimCustomer.DateFirstPurchase
+	toColumn: LocalDateTable_6f9ac2ff-492e-4499-a82f-a9585f61bc4c.Date
+
+relationship bb39fdc4-98a1-4f0f-95a6-8cb8169cf012
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimDate.FullDateAlternateKey
+	toColumn: LocalDateTable_6868f90f-9eec-4a93-a398-1e8e51d5051f.Date
+
+relationship 996e9f5e-0b9c-4451-bf20-f0e57d536c00
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimProduct.StartDate
+	toColumn: LocalDateTable_161b47d3-6e43-4623-a12b-f669aab80ea2.Date
+
+relationship 0b7c0068-39d0-4c72-82a2-1175bf25e7fa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimProduct.EndDate
+	toColumn: LocalDateTable_24860541-3a50-4333-ae39-6b61cf60999f.Date
+
+relationship 93041751-989c-4db9-acbd-4754f877c1b5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactInternetSales.OrderDate
+	toColumn: LocalDateTable_fceb864f-b4d9-4325-af8b-31619d2cb383.Date
+
+relationship 9f0aaad4-6be0-49ab-beee-a8d660ad6320
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactInternetSales.DueDate
+	toColumn: LocalDateTable_a515e484-0588-45a2-befb-cd0412d72162.Date
+
+relationship eb215435-7ce7-4b61-af3e-5b3beff90748
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FactInternetSales.ShipDate
+	toColumn: LocalDateTable_703b519f-72c4-4bc3-9a69-bfc9b18acd37.Date
+
+relationship d751b079-87a4-438d-876d-da34accb0aab
+	fromColumn: DimCustomer.GeographyKey
+	toColumn: DimGeography.GeographyKey
+
+relationship 216a0c72-5d6a-4096-a541-e84dc9ea6162
+	fromColumn: FactInternetSales.CustomerKey
+	toColumn: DimCustomer.CustomerKey
+
+relationship 1d99f55f-fb6d-4084-af50-83025f395816
+	fromColumn: FactInternetSales.DueDateKey
+	toColumn: DimDate.DateKey
+
+relationship 760a1250-c9b6-4c35-88e7-1a389fdf813f
+	isActive: false
+	fromColumn: FactInternetSales.OrderDateKey
+	toColumn: DimDate.DateKey
+
+relationship 42be9e10-8163-4383-bf2e-1bbb4ae341a5
+	isActive: false
+	fromColumn: FactInternetSales.ShipDateKey
+	toColumn: DimDate.DateKey
+
+relationship 321b4e86-6940-4793-acad-1fd6dea2e494
+	fromColumn: DimProduct.ProductSubcategoryKey
+	toColumn: DimProductSubcategory.ProductSubcategoryKey
+
+relationship 6fbd9732-f48e-49ef-9f12-8f1062865ac3
+	fromColumn: FactInternetSales.ProductKey
+	toColumn: DimProduct.ProductKey
+
+relationship a979d03b-02c4-4ba7-84c3-a6a31a1ec644
+	fromColumn: DimProductSubcategory.ProductCategoryKey
+	toColumn: DimProductCategory.ProductCategoryKey
+

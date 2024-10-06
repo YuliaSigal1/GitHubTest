@@ -1,0 +1,387 @@
+table DimProduct
+	lineageTag: e93ac06d-463f-45ba-b8dc-bf786a9b88f5
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 74f6f69e-a034-424e-b4dd-03dc69b619fb
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column ProductAlternateKey
+		dataType: string
+		lineageTag: 9c86d91f-ec63-46fd-bed6-7489c8437e7d
+		summarizeBy: none
+		sourceColumn: ProductAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column ProductSubcategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c55671ff-23f5-41b3-8400-33be3032054a
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column WeightUnitMeasureCode
+		dataType: string
+		lineageTag: 34770ffc-2b38-4d8a-9464-c66d49bd47a8
+		summarizeBy: none
+		sourceColumn: WeightUnitMeasureCode
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column SizeUnitMeasureCode
+		dataType: string
+		lineageTag: 7d03bab7-1094-4afa-b366-97ccabfa1374
+		summarizeBy: none
+		sourceColumn: SizeUnitMeasureCode
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column EnglishProductName
+		dataType: string
+		lineageTag: 93c84a5e-6117-49fa-9214-779263f1c304
+		summarizeBy: none
+		sourceColumn: EnglishProductName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column SpanishProductName
+		dataType: string
+		lineageTag: 0e06babc-516c-48ee-971e-c894ff107bba
+		summarizeBy: none
+		sourceColumn: SpanishProductName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column FrenchProductName
+		dataType: string
+		lineageTag: ed913cab-7152-42fa-a5ef-f14da9d37597
+		summarizeBy: none
+		sourceColumn: FrenchProductName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column StandardCost
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 4f54c0f1-5c72-4e61-ae0c-8de6c832ff0b
+		summarizeBy: sum
+		sourceColumn: StandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="CurrencyGeneral" ThousandSeparator="True"><Currency LCID="1033" DisplayName="$ English (United States)" Symbol="$" PositivePattern="0" NegativePattern="0" /></Format>
+
+	column FinishedGoodsFlag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f4012035-6f97-4d42-bd3b-2dee8c78630f
+		summarizeBy: none
+		sourceColumn: FinishedGoodsFlag
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Boolean" />
+
+	column Color
+		dataType: string
+		lineageTag: 6e29c561-902c-42d2-974b-c4cb8bf701e3
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column SafetyStockLevel
+		dataType: int64
+		formatString: 0
+		lineageTag: d21a1bcf-953b-454e-845c-626799dc0917
+		summarizeBy: sum
+		sourceColumn: SafetyStockLevel
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column ReorderPoint
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d115904-33e9-4b02-8d8a-c13aad9d2598
+		summarizeBy: sum
+		sourceColumn: ReorderPoint
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column ListPrice
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 14073302-6fd6-4bfd-9470-94201bcd2580
+		summarizeBy: sum
+		sourceColumn: ListPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="CurrencyGeneral" ThousandSeparator="True"><Currency LCID="1033" DisplayName="$ English (United States)" Symbol="$" PositivePattern="0" NegativePattern="0" /></Format>
+
+	column Size
+		dataType: string
+		lineageTag: 746d0a46-b739-423f-aa94-79b4ec23c034
+		summarizeBy: none
+		sourceColumn: Size
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column SizeRange
+		dataType: string
+		lineageTag: 08c27962-5776-4e98-a997-02bf55c6d08c
+		summarizeBy: none
+		sourceColumn: SizeRange
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column Weight
+		dataType: double
+		lineageTag: eb8eb5fa-bc51-4f36-9172-97ea42d31cab
+		summarizeBy: sum
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="General" />
+
+	column DaysToManufacture
+		dataType: int64
+		formatString: 0
+		lineageTag: 5441d66d-2454-43dc-9df8-707f9e1593d9
+		summarizeBy: sum
+		sourceColumn: DaysToManufacture
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+	column ProductLine
+		dataType: string
+		lineageTag: 6ea006d6-8561-4be8-9726-8ec82abb9583
+		summarizeBy: none
+		sourceColumn: ProductLine
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column DealerPrice
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 36b92d3a-3eda-4c3d-8aed-0c7f8e4e2dff
+		summarizeBy: sum
+		sourceColumn: DealerPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="CurrencyGeneral" ThousandSeparator="True"><Currency LCID="1033" DisplayName="$ English (United States)" Symbol="$" PositivePattern="0" NegativePattern="0" /></Format>
+
+	column Class
+		dataType: string
+		lineageTag: 35842371-28a8-49d2-a799-5ad1cef63589
+		summarizeBy: none
+		sourceColumn: Class
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column Style
+		dataType: string
+		lineageTag: c96014de-27d3-4742-a45c-b231b4230f84
+		summarizeBy: none
+		sourceColumn: Style
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column ModelName
+		dataType: string
+		lineageTag: 0623edce-1e4f-45fa-bb83-392fd142823c
+		summarizeBy: none
+		sourceColumn: ModelName
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column EnglishDescription
+		dataType: string
+		lineageTag: 4101ebfc-dbde-4fda-834f-a0e31d539590
+		summarizeBy: none
+		sourceColumn: EnglishDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column FrenchDescription
+		dataType: string
+		lineageTag: 86c4578e-7ee2-472c-971f-524d0ed59be2
+		summarizeBy: none
+		sourceColumn: FrenchDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column ChineseDescription
+		dataType: string
+		lineageTag: 4a6f3b0f-b27c-4cff-8851-8c8371674162
+		summarizeBy: none
+		sourceColumn: ChineseDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column ArabicDescription
+		dataType: string
+		lineageTag: f0bdc0e9-1f5f-4625-b398-0bd219e5ad6f
+		summarizeBy: none
+		sourceColumn: ArabicDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column HebrewDescription
+		dataType: string
+		lineageTag: 484f2bf9-19c3-4c73-8c22-ff8225ad32eb
+		summarizeBy: none
+		sourceColumn: HebrewDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column ThaiDescription
+		dataType: string
+		lineageTag: bd975b41-d18d-494e-9bc9-8d31892e0b73
+		summarizeBy: none
+		sourceColumn: ThaiDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column GermanDescription
+		dataType: string
+		lineageTag: 76c8533e-7088-4fe5-83e5-5f7fc88811e8
+		summarizeBy: none
+		sourceColumn: GermanDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column JapaneseDescription
+		dataType: string
+		lineageTag: 1b0ecb5f-27be-4e17-8d0a-ebdb8a2e55f5
+		summarizeBy: none
+		sourceColumn: JapaneseDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column TurkishDescription
+		dataType: string
+		lineageTag: 5d8fe883-95a7-4771-bcb3-2e0fb3816be9
+		summarizeBy: none
+		sourceColumn: TurkishDescription
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	column StartDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3e0cb57c-6488-4210-87b1-b1d71eb6b440
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		variation Variation
+			isDefault
+			relationship: 996e9f5e-0b9c-4451-bf20-f0e57d536c00
+			defaultHierarchy: LocalDateTable_161b47d3-6e43-4623-a12b-f669aab80ea2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="1033" Group="GeneralDateTimeLong" FormatString="G" /></DateTimes></Format>
+
+	column EndDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 331dbfd2-36c1-4032-924b-8cde1cccce4e
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		variation Variation
+			isDefault
+			relationship: 0b7c0068-39d0-4c72-82a2-1175bf25e7fa
+			defaultHierarchy: LocalDateTable_24860541-3a50-4333-ae39-6b61cf60999f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="1033" Group="GeneralDateTimeLong" FormatString="G" /></DateTimes></Format>
+
+	column Status
+		dataType: string
+		lineageTag: dd203e91-0439-4961-9417-5116b472a612
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Text" />
+
+	partition DimProduct-dc88ee39-0e05-4eb5-858f-9f9baf6edbd9 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("jxkt4xphz2.database.windows.net", "Adventure Works DW Tabular Denali CTP3"),
+				    dbo_DimProduct = Source{[Schema="dbo",Item="DimProduct"]}[Data]
+				in
+				    dbo_DimProduct
+
+	annotation PBI_QueryRelationships = {"columnCount":36,"keyColumnNames":["ProductKey"],"queryRelationships":[{"keyColumnCount":1,"keyColumn":2,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{ProductSubcategoryKey,0}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactInternetSales.{ProductKey,0}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactProductInventory.{ProductKey,0}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactResellerSales.{ProductKey,0}","KeyColumnCount":1}],"columnIdentities":["Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ProductKey,0}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ProductAlternateKey,1}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ProductSubcategoryKey,2}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{WeightUnitMeasureCode,3}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{SizeUnitMeasureCode,4}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{EnglishProductName,5}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{SpanishProductName,6}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{FrenchProductName,7}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{StandardCost,8}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{FinishedGoodsFlag,9}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Color,10}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{SafetyStockLevel,11}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ReorderPoint,12}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ListPrice,13}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Size,14}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{SizeRange,15}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Weight,16}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{DaysToManufacture,17}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ProductLine,18}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{DealerPrice,19}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Class,20}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Style,21}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ModelName,22}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{LargePhoto,23}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{EnglishDescription,24}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{FrenchDescription,25}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ChineseDescription,26}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ArabicDescription,27}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{HebrewDescription,28}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ThaiDescription,29}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{GermanDescription,30}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{JapaneseDescription,31}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{TurkishDescription,32}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{StartDate,33}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{EndDate,34}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Status,35}"],"ColumnCount":36,"KeyColumnNames":["ProductKey"],"ColumnIdentities":["Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ProductKey,0}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ProductAlternateKey,1}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ProductSubcategoryKey,2}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{WeightUnitMeasureCode,3}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{SizeUnitMeasureCode,4}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{EnglishProductName,5}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{SpanishProductName,6}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{FrenchProductName,7}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{StandardCost,8}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{FinishedGoodsFlag,9}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Color,10}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{SafetyStockLevel,11}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ReorderPoint,12}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ListPrice,13}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Size,14}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{SizeRange,15}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Weight,16}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{DaysToManufacture,17}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ProductLine,18}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{DealerPrice,19}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Class,20}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Style,21}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ModelName,22}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{LargePhoto,23}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{EnglishDescription,24}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{FrenchDescription,25}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ChineseDescription,26}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ArabicDescription,27}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{HebrewDescription,28}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{ThaiDescription,29}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{GermanDescription,30}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{JapaneseDescription,31}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{TurkishDescription,32}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{StartDate,33}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{EndDate,34}","Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProduct.{Status,35}"],"RelationshipInfo":[{"keyColumnCount":1,"keyColumn":2,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/DimProductSubcategory.{ProductSubcategoryKey,0}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactInternetSales.{ProductKey,0}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactProductInventory.{ProductKey,0}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Server.Database\\/2/SQL/jxkt4xphz2.database.windows.net;Adventure Works DW Tabular Denali CTP3/dbo/FactResellerSales.{ProductKey,0}","KeyColumnCount":1}]}
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "AllNativeVisuals"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "875e4067-8ce7-4382-bdd4-7d93d0e4b1e5"
+  }
+}

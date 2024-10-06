@@ -1,0 +1,433 @@
+{
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY19SU12\",\"version\":\"5.6\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"allowDataPointLassoSelect\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY19SU12",
+            "path": "BaseThemes/CY19SU12.json",
+            "type": 202
+          },
+          {
+            "name": "usa.states.topo",
+            "path": "Shapemaps/usa.states.topo.json",
+            "type": 200
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"030fbaa9b8bcbe1ac042\",\"layouts\":[{\"id\":0,\"position\":{\"x\":354.2596810933941,\"y\":0,\"width\":339.19514047076694,\"height\":359.60516324981023,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"},{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 359.61,
+          "width": 339.20,
+          "x": 354.26,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"4b0d7631097bbd301ebb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":720.1822323462416,\"y\":0,\"z\":2000,\"width\":559.8177676537586,\"height\":359.60516324981023}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Category\":[{\"queryRef\":\"DimCustomer.EnglishEducation\",\"active\":true}],\"Series\":[{\"queryRef\":\"DimCustomer.EnglishOccupation\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimCustomer\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishEducation\"},\"Name\":\"DimCustomer.EnglishEducation\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishOccupation\"},\"Name\":\"DimCustomer.EnglishOccupation\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 359.61,
+          "width": 559.82,
+          "x": 720.18,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"73e801396482032a4508\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":339.19514047076694,\"height\":359.60516324981023}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"},{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"}],\"Category\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 359.61,
+          "width": 339.20,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"a36c1ab546ae4e0ded0a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":339.19514047076694,\"y\":358.6332574031891,\"z\":5000,\"width\":353.77372817008353,\"height\":360.57706909643133}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"},{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"}],\"Category\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 360.58,
+          "width": 353.77,
+          "x": 339.20,
+          "y": 358.63,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"cb331c0403c1a24126c8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":720.1822323462416,\"y\":359.60516324981023,\"z\":3000,\"width\":559.8177676537586,\"height\":360.57706909643133}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Category\":[{\"queryRef\":\"DimCustomer.EnglishEducation\",\"active\":true}],\"Series\":[{\"queryRef\":\"DimCustomer.EnglishOccupation\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimCustomer\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishEducation\"},\"Name\":\"DimCustomer.EnglishEducation\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishOccupation\"},\"Name\":\"DimCustomer.EnglishOccupation\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 360.58,
+          "width": 559.82,
+          "x": 720.18,
+          "y": 359.61,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"eac69ca1db017606a5c1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":359.60516324981023,\"width\":339.19514047076694,\"height\":360.39483675018977,\"z\":4000}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"},{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"}],\"Category\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 360.39,
+          "width": 339.20,
+          "x": 0.00,
+          "y": 359.61,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"ebc138cd292b909beb6e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":880.1875016459063,\"y\":420.67785005135227,\"z\":5001,\"width\":299.8678008058357,\"height\":299.8678008058357,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 299.87,
+          "width": 299.87,
+          "x": 880.19,
+          "y": 420.68,
+          "z": 5001.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 7",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection7b0909736a7965720870",
+      "ordinal": 6,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"08464f9209e47d36c4bb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":820.7299270072994,\"y\":0,\"z\":1000,\"width\":458.97810218978105,\"height\":639.4160583941606}}],\"singleVisual\":{\"visualType\":\"keyDriversVisual\",\"projections\":{\"Target\":[{\"queryRef\":\"FactInternetSales.SalesAmount\"}],\"ExplainBy\":[{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"},{\"queryRef\":\"Sum(FactInternetSales.Freight)\"},{\"queryRef\":\"CountNonNull(FactInternetSales.SalesTerritoryKey)\"}],\"Details\":[{\"queryRef\":\"DimGeography.EnglishCountryRegionName\"},{\"queryRef\":\"DimGeography.City\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimGeography\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"FactInternetSales.SalesAmount\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Freight\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.Freight)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishCountryRegionName\"},\"Name\":\"DimGeography.EnglishCountryRegionName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"City\"},\"Name\":\"DimGeography.City\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesTerritoryKey\"}},\"Function\":5},\"Name\":\"CountNonNull(FactInternetSales.SalesTerritoryKey)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"keyDrivers\":[{\"properties\":{\"numericTargetSelectedKind\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Key Influencers'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 639.42,
+          "width": 458.98,
+          "x": 820.73,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"7c6f4d7ad710bc533721\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":820.823723228995,\"height\":639.341021416804}}],\"singleVisual\":{\"visualType\":\"decompositionTreeVisual\",\"projections\":{\"Analyze\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"ExplainBy\":[{\"queryRef\":\"DimCustomer.EnglishEducation\",\"active\":true},{\"queryRef\":\"DimCustomer.Gender\",\"active\":true},{\"queryRef\":\"DimProduct.Color\",\"active\":true},{\"queryRef\":\"DimCustomer.EnglishOccupation\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimCustomer\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishEducation\"},\"Name\":\"DimCustomer.EnglishEducation\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishOccupation\"},\"Name\":\"DimCustomer.EnglishOccupation\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Gender\"},\"Name\":\"DimCustomer.Gender\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"expansionStates\":[{\"roles\":[\"ExplainBy\"],\"levels\":[{\"queryRefs\":[\"DimCustomer.EnglishEducation\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DimCustomer\"}},\"Property\":\"EnglishEducation\"}}],\"isPinned\":true},{\"queryRefs\":[\"DimCustomer.Gender\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DimCustomer\"}},\"Property\":\"Gender\"}}],\"isPinned\":true},{\"queryRefs\":[\"DimProduct.Color\"],\"isCollapsed\":true,\"isPinned\":true},{\"queryRefs\":[\"DimCustomer.EnglishOccupation\"],\"isCollapsed\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Bachelors'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'F'\"}}],\"isToggled\":true}]}]}}],\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"tree\":[{\"properties\":{\"barsPerLevel\":{\"expr\":{\"Literal\":{\"Value\":\"8L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Decomposition Tree'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"'18'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 639.34,
+          "width": 820.82,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 6",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiona3f1ac87a54e81a06ab9",
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"19fbc73104713aa8bc0b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.696969696969697,\"y\":0,\"z\":0,\"width\":453.1129476584022,\"height\":359.66942148760336}}],\"singleVisual\":{\"visualType\":\"scriptVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"DimProduct.Class\"},{\"queryRef\":\"FactInternetSales.SalesAmount\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Class\"},\"Name\":\"DimProduct.Class\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"},\"Name\":\"FactInternetSales.SalesAmount\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"script\":[{\"properties\":{\"source\":{\"expr\":{\"Literal\":{\"Value\":\"'# The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: \\r\\n\\r\\n# dataset <- data.frame(Class, SalesAmount)\\r\\n# dataset <- unique(dataset)\\r\\n\\r\\n# Paste or type your script code here:\\r\\n\\r\\nx <- data.frame(replicate(2, rnorm(10)))\\r\\nlibrary(ggplot2)\\r\\nqplot(x[[1]], x[[2]], main=Sys.time())'\"}}},\"provider\":{\"expr\":{\"Literal\":{\"Value\":\"'R'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 359.67,
+          "width": 453.11,
+          "x": 9.70,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"49f883eb83a9267c61c3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":370,\"width\":453,\"height\":350,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"pythonVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"},{\"queryRef\":\"DimProduct.Color\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"script\":[{\"properties\":{\"source\":{\"expr\":{\"Literal\":{\"Value\":\"'# The following code to create a dataframe and remove duplicated rows is always executed and acts as a preamble for your script: \\r\\n\\r\\n# dataset = pandas.DataFrame(SalesAmount, Color)\\r\\n# dataset = dataset.drop_duplicates()\\r\\n\\r\\n# Paste or type your script code here:\\r\\n\\r\\nimport matplotlib.pyplot as plt\\r\\ndataset.plot()\\r\\nplt.show()'\"}}},\"provider\":{\"expr\":{\"Literal\":{\"Value\":\"'Python'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 350.00,
+          "width": 453.00,
+          "x": 10.00,
+          "y": 370.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"a4aea4200c8cd00e9bde\",\"layouts\":[{\"id\":0,\"position\":{\"x\":473.38842975206614,\"y\":0,\"z\":2000,\"width\":806.611570247934,\"height\":720.2203856749312}}],\"singleVisual\":{\"visualType\":\"esriVisual\",\"projections\":{\"Location\":[{\"queryRef\":\"DimGeography.EnglishCountryRegionName\"}],\"Size\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimGeography\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishCountryRegionName\"},\"Name\":\"DimGeography.EnglishCountryRegionName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"mapObject\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"'{\\\"portalUrl\\\":\\\"https://www.arcgis.com\\\",\\\"version\\\":\\\"2.1\\\",\\\"isAuthorNamedUser\\\":false,\\\"map\\\":{\\\"webmap\\\":{\\\"item\\\":{\\\"extent\\\":[[-179.99999999999696,-68.8563283432429],[65.7416321535268,81.17080606375237]]},\\\"itemData\\\":{\\\"operationalLayers\\\":[{\\\"id\\\":\\\"MyLayer\\\",\\\"objectIdField\\\":\\\"objectId\\\",\\\"type\\\":\\\"PowerBILayer\\\",\\\"layerType\\\":\\\"ArcGISFeatureLayer\\\",\\\"visible\\\":true,\\\"opacity\\\":1,\\\"title\\\":\\\"Power BI Layer\\\",\\\"popupEnabled\\\":true,\\\"disablePopup\\\":false,\\\"esriMaps\\\":{\\\"customProps\\\":null,\\\"isTimeEnabled\\\":\\\"false\\\",\\\"clusterInfo\\\":null,\\\"filteredRenderer\\\":null,\\\"lastShareInfo\\\":null},\\\"timeInfo\\\":null,\\\"refreshInterval\\\":0,\\\"showLabels\\\":false,\\\"featureCollection\\\":{\\\"layers\\\":[{\\\"popupInfo\\\":{\\\"popupElements\\\":[{\\\"type\\\":\\\"fields\\\",\\\"fieldInfos\\\":[{\\\"fieldName\\\":\\\"EnglishCountryRegionName\\\",\\\"label\\\":\\\"EnglishCountryRegionName\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true},{\\\"fieldName\\\":\\\"SalesAmount\\\",\\\"format\\\":{\\\"digitSeparator\\\":true,\\\"places\\\":2},\\\"label\\\":\\\"SalesAmount\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true},{\\\"fieldName\\\":\\\"ROW_ID\\\",\\\"format\\\":{\\\"digitSeparator\\\":true,\\\"places\\\":0},\\\"label\\\":\\\"ROW_ID\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true}]}],\\\"expressionInfos\\\":[],\\\"fieldInfos\\\":[{\\\"fieldName\\\":\\\"EnglishCountryRegionName\\\",\\\"label\\\":\\\"EnglishCountryRegionName\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true},{\\\"fieldName\\\":\\\"SalesAmount\\\",\\\"format\\\":{\\\"digitSeparator\\\":true,\\\"places\\\":2},\\\"label\\\":\\\"SalesAmount\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true},{\\\"fieldName\\\":\\\"ROW_ID\\\",\\\"format\\\":{\\\"digitSeparator\\\":true,\\\"places\\\":0},\\\"label\\\":\\\"ROW_ID\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true}],\\\"title\\\":\\\"\\\",\\\"actions\\\":[]},\\\"layerDefinition\\\":{\\\"name\\\":\\\"Power BI Layer\\\",\\\"objectIdField\\\":\\\"objectId\\\",\\\"fields\\\":[{\\\"alias\\\":\\\"objectId\\\",\\\"editable\\\":false,\\\"length\\\":-1,\\\"name\\\":\\\"objectId\\\",\\\"nullable\\\":false,\\\"type\\\":\\\"esriFieldTypeOID\\\"},{\\\"alias\\\":\\\"EnglishCountryRegionName\\\",\\\"editable\\\":true,\\\"length\\\":-1,\\\"name\\\":\\\"EnglishCountryRegionName\\\",\\\"nullable\\\":true,\\\"type\\\":\\\"esriFieldTypeString\\\"},{\\\"alias\\\":\\\"SalesAmount\\\",\\\"editable\\\":true,\\\"length\\\":-1,\\\"name\\\":\\\"SalesAmount\\\",\\\"nullable\\\":true,\\\"type\\\":\\\"esriFieldTypeDouble\\\"},{\\\"alias\\\":\\\"ROW_ID\\\",\\\"editable\\\":true,\\\"length\\\":-1,\\\"name\\\":\\\"ROW_ID\\\",\\\"nullable\\\":true,\\\"type\\\":\\\"esriFieldTypeInteger\\\"}],\\\"geometryType\\\":\\\"polygon\\\",\\\"drawingInfo\\\":{\\\"renderer\\\":{\\\"authoringInfo\\\":{\\\"classificationMethod\\\":\\\"esriClassifyNaturalBreaks\\\",\\\"type\\\":\\\"classedColor\\\"},\\\"type\\\":\\\"classBreaks\\\",\\\"visualVariables\\\":[],\\\"classBreakInfos\\\":[{\\\"classMaxValue\\\":55.9279,\\\"symbol\\\":{\\\"type\\\":\\\"esriSFS\\\",\\\"color\\\":[242,203,176,255],\\\"outline\\\":{\\\"type\\\":\\\"esriSLS\\\",\\\"color\\\":[153,153,153,64],\\\"width\\\":0.5,\\\"style\\\":\\\"esriSLSSolid\\\"},\\\"style\\\":\\\"esriSFSSolid\\\"}},{\\\"classMaxValue\\\":286.2616,\\\"symbol\\\":{\\\"type\\\":\\\"esriSFS\\\",\\\"color\\\":[223,129,122,255],\\\"outline\\\":{\\\"type\\\":\\\"esriSLS\\\",\\\"color\\\":[153,153,153,64],\\\"width\\\":0.5,\\\"style\\\":\\\"esriSLSSolid\\\"},\\\"style\\\":\\\"esriSFSSolid\\\"}},{\\\"classMaxValue\\\":858.7848,\\\"symbol\\\":{\\\"type\\\":\\\"esriSFS\\\",\\\"color\\\":[175,70,93,255],\\\"outline\\\":{\\\"type\\\":\\\"esriSLS\\\",\\\"color\\\":[153,153,153,64],\\\"width\\\":0.5,\\\"style\\\":\\\"esriSLSSolid\\\"},\\\"style\\\":\\\"esriSFSSolid\\\"}}],\\\"defaultSymbol\\\":{\\\"type\\\":\\\"esriSFS\\\",\\\"color\\\":[0,184,170,153],\\\"outline\\\":{\\\"type\\\":\\\"esriSLS\\\",\\\"color\\\":[255,255,255,255],\\\"width\\\":0.75,\\\"style\\\":\\\"esriSLSSolid\\\"},\\\"style\\\":\\\"esriSFSSolid\\\"},\\\"field\\\":\\\"TaxAmt\\\",\\\"minValue\\\":55.9279},\\\"labelingInfo\\\":null},\\\"featureReduction\\\":null,\\\"type\\\":\\\"PowerBILayer\\\",\\\"minScale\\\":0,\\\"maxScale\\\":0,\\\"locationProvider\\\":{\\\"type\\\":\\\"cachedstdgeo\\\",\\\"adminLevel\\\":\\\"countries\\\",\\\"targetSR\\\":{\\\"latestWkid\\\":3857,\\\"wkid\\\":102100},\\\"sourceCountry\\\":\\\"world\\\",\\\"geographyLevel\\\":\\\"countries\\\",\\\"lookupFields\\\":[{\\\"lookupField\\\":\\\"Location\\\",\\\"outField\\\":\\\"EnglishCountryRegionName\\\"}]},\\\"queryParameters\\\":{\\\"tableId\\\":\\\"\\\",\\\"outFields\\\":[\\\"EnglishCountryRegionName\\\",\\\"SalesAmount\\\",\\\"ROW_ID\\\"]}},\\\"featureSet\\\":{\\\"geometryType\\\":\\\"polygon\\\",\\\"features\\\":[]}}]},\\\"minScale\\\":0,\\\"maxScale\\\":0}],\\\"baseMap\\\":{\\\"baseMapLayers\\\":[{\\\"id\\\":\\\"VectorTile_8363\\\",\\\"title\\\":\\\"Light Gray Canvas Base\\\",\\\"layerType\\\":\\\"VectorTileLayer\\\",\\\"minScale\\\":0,\\\"maxScale\\\":0,\\\"styleUrl\\\":\\\"https://www.arcgis.com/sharing/rest/content/items/291da5eab3a0412593b66d384379f89f/resources/styles/root.json\\\"},{\\\"id\\\":\\\"VectorTile_9931\\\",\\\"title\\\":\\\"Light Gray Canvas Reference\\\",\\\"layerType\\\":\\\"VectorTileLayer\\\",\\\"minScale\\\":0,\\\"maxScale\\\":0,\\\"styleUrl\\\":\\\"https://www.arcgis.com/sharing/rest/content/items/1768e8369a214dfab4e2167d5c5f2454/resources/styles/root.json\\\",\\\"isReference\\\":true}],\\\"title\\\":\\\"Light Gray Canvas\\\"},\\\"version\\\":\\\"2.11\\\"}},\\\"webmapExtensions\\\":{\\\"mapDemographicsCardSettings\\\":{\\\"studyArea\\\":{\\\"radii\\\":[20],\\\"travel_mode\\\":\\\"ring\\\",\\\"units\\\":\\\"Miles\\\"},\\\"variables\\\":[]},\\\"layerJoinSettings\\\":[],\\\"operationalLayers\\\":[{\\\"id\\\":\\\"MyLayer\\\",\\\"objectIdField\\\":\\\"objectId\\\",\\\"type\\\":\\\"PowerBILayer\\\",\\\"layerType\\\":\\\"ArcGISFeatureLayer\\\",\\\"visible\\\":true,\\\"opacity\\\":1,\\\"title\\\":\\\"Power BI Layer\\\",\\\"popupEnabled\\\":true,\\\"disablePopup\\\":false,\\\"esriMaps\\\":{\\\"customProps\\\":null,\\\"isTimeEnabled\\\":\\\"false\\\",\\\"clusterInfo\\\":null,\\\"filteredRenderer\\\":null,\\\"lastShareInfo\\\":null},\\\"timeInfo\\\":null,\\\"refreshInterval\\\":0,\\\"showLabels\\\":false,\\\"featureCollection\\\":{\\\"layers\\\":[{\\\"popupInfo\\\":{\\\"popupElements\\\":[{\\\"type\\\":\\\"fields\\\",\\\"fieldInfos\\\":[{\\\"fieldName\\\":\\\"EnglishCountryRegionName\\\",\\\"label\\\":\\\"EnglishCountryRegionName\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true},{\\\"fieldName\\\":\\\"SalesAmount\\\",\\\"format\\\":{\\\"digitSeparator\\\":true,\\\"places\\\":2},\\\"label\\\":\\\"SalesAmount\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true},{\\\"fieldName\\\":\\\"ROW_ID\\\",\\\"format\\\":{\\\"digitSeparator\\\":true,\\\"places\\\":0},\\\"label\\\":\\\"ROW_ID\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true}]}],\\\"expressionInfos\\\":[],\\\"fieldInfos\\\":[{\\\"fieldName\\\":\\\"EnglishCountryRegionName\\\",\\\"label\\\":\\\"EnglishCountryRegionName\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true},{\\\"fieldName\\\":\\\"SalesAmount\\\",\\\"format\\\":{\\\"digitSeparator\\\":true,\\\"places\\\":2},\\\"label\\\":\\\"SalesAmount\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true},{\\\"fieldName\\\":\\\"ROW_ID\\\",\\\"format\\\":{\\\"digitSeparator\\\":true,\\\"places\\\":0},\\\"label\\\":\\\"ROW_ID\\\",\\\"tooltip\\\":\\\"\\\",\\\"visible\\\":true}],\\\"title\\\":\\\"\\\",\\\"actions\\\":[]},\\\"layerDefinition\\\":{\\\"name\\\":\\\"Power BI Layer\\\",\\\"objectIdField\\\":\\\"objectId\\\",\\\"fields\\\":[{\\\"alias\\\":\\\"objectId\\\",\\\"editable\\\":false,\\\"length\\\":-1,\\\"name\\\":\\\"objectId\\\",\\\"nullable\\\":false,\\\"type\\\":\\\"esriFieldTypeOID\\\"},{\\\"alias\\\":\\\"EnglishCountryRegionName\\\",\\\"editable\\\":true,\\\"length\\\":-1,\\\"name\\\":\\\"EnglishCountryRegionName\\\",\\\"nullable\\\":true,\\\"type\\\":\\\"esriFieldTypeString\\\"},{\\\"alias\\\":\\\"SalesAmount\\\",\\\"editable\\\":true,\\\"length\\\":-1,\\\"name\\\":\\\"SalesAmount\\\",\\\"nullable\\\":true,\\\"type\\\":\\\"esriFieldTypeDouble\\\"},{\\\"alias\\\":\\\"ROW_ID\\\",\\\"editable\\\":true,\\\"length\\\":-1,\\\"name\\\":\\\"ROW_ID\\\",\\\"nullable\\\":true,\\\"type\\\":\\\"esriFieldTypeInteger\\\"}],\\\"geometryType\\\":\\\"polygon\\\",\\\"drawingInfo\\\":{\\\"renderer\\\":{\\\"authoringInfo\\\":{\\\"classificationMethod\\\":\\\"esriClassifyNaturalBreaks\\\",\\\"type\\\":\\\"classedColor\\\"},\\\"type\\\":\\\"classBreaks\\\",\\\"visualVariables\\\":[],\\\"classBreakInfos\\\":[{\\\"classMaxValue\\\":55.9279,\\\"symbol\\\":{\\\"type\\\":\\\"esriSFS\\\",\\\"color\\\":[242,203,176,255],\\\"outline\\\":{\\\"type\\\":\\\"esriSLS\\\",\\\"color\\\":[153,153,153,64],\\\"width\\\":0.5,\\\"style\\\":\\\"esriSLSSolid\\\"},\\\"style\\\":\\\"esriSFSSolid\\\"}},{\\\"classMaxValue\\\":286.2616,\\\"symbol\\\":{\\\"type\\\":\\\"esriSFS\\\",\\\"color\\\":[223,129,122,255],\\\"outline\\\":{\\\"type\\\":\\\"esriSLS\\\",\\\"color\\\":[153,153,153,64],\\\"width\\\":0.5,\\\"style\\\":\\\"esriSLSSolid\\\"},\\\"style\\\":\\\"esriSFSSolid\\\"}},{\\\"classMaxValue\\\":858.7848,\\\"symbol\\\":{\\\"type\\\":\\\"esriSFS\\\",\\\"color\\\":[175,70,93,255],\\\"outline\\\":{\\\"type\\\":\\\"esriSLS\\\",\\\"color\\\":[153,153,153,64],\\\"width\\\":0.5,\\\"style\\\":\\\"esriSLSSolid\\\"},\\\"style\\\":\\\"esriSFSSolid\\\"}}],\\\"defaultSymbol\\\":{\\\"type\\\":\\\"esriSFS\\\",\\\"color\\\":[0,184,170,153],\\\"outline\\\":{\\\"type\\\":\\\"esriSLS\\\",\\\"color\\\":[255,255,255,255],\\\"width\\\":0.75,\\\"style\\\":\\\"esriSLSSolid\\\"},\\\"style\\\":\\\"esriSFSSolid\\\"},\\\"field\\\":\\\"TaxAmt\\\",\\\"minValue\\\":55.9279},\\\"labelingInfo\\\":null},\\\"featureReduction\\\":null,\\\"type\\\":\\\"PowerBILayer\\\",\\\"minScale\\\":0,\\\"maxScale\\\":0,\\\"locationProvider\\\":{\\\"type\\\":\\\"cachedstdgeo\\\",\\\"adminLevel\\\":\\\"countries\\\",\\\"targetSR\\\":{\\\"latestWkid\\\":3857,\\\"wkid\\\":102100},\\\"sourceCountry\\\":\\\"world\\\",\\\"geographyLevel\\\":\\\"countries\\\",\\\"lookupFields\\\":[{\\\"lookupField\\\":\\\"Location\\\",\\\"outField\\\":\\\"EnglishCountryRegionName\\\"}]},\\\"queryParameters\\\":{\\\"tableId\\\":\\\"\\\",\\\"outFields\\\":[\\\"EnglishCountryRegionName\\\",\\\"SalesAmount\\\",\\\"ROW_ID\\\"]}},\\\"featureSet\\\":{\\\"geometryType\\\":\\\"polygon\\\",\\\"features\\\":[]}}]},\\\"minScale\\\":0,\\\"maxScale\\\":0}],\\\"basemapExtent\\\":{\\\"spatialReference\\\":{\\\"latestWkid\\\":3857,\\\"wkid\\\":102100},\\\"xmin\\\":-23872874.49490467,\\\"ymin\\\":-10706303.033547305,\\\"xmax\\\":7318325.0152493045,\\\"ymax\\\":16336506.077514675}}}}'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.22,
+          "width": 806.61,
+          "x": 473.39,
+          "y": 0.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 5",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiona90706141b24093c3248",
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"04e9d8d7cd16e113deec\",\"layouts\":[{\"id\":0,\"position\":{\"x\":421.37741046831957,\"y\":423.1404958677686,\"z\":2000,\"width\":518.3471074380166,\"height\":297.07988980716254}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Rows\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}],\"Columns\":[{\"queryRef\":\"DimProductCategory.EnglishProductCategoryName\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimProductCategory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"EnglishProductCategoryName\"},\"Name\":\"DimProductCategory.EnglishProductCategoryName\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 297.08,
+          "width": 518.35,
+          "x": 421.38,
+          "y": 423.14,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"30f84728eed26c604bd6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":421.37741046831957,\"y\":0,\"z\":3000,\"width\":517.4655647382921,\"height\":423.1404958677686}}],\"singleVisual\":{\"visualType\":\"qnaVisual\",\"drillFilterOtherVisuals\":true,\"objects\":{\"hiddenProperties\":[{\"properties\":{\"savedUtterance\":{\"expr\":{\"Literal\":{\"Value\":\"'SalesAmount by order date'\"}}}}}]}}}",
+          "height": 423.14,
+          "width": 517.47,
+          "x": 421.38,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"6da54ab949bc35a6eea9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":370,\"width\":412,\"height\":350,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"},{\"queryRef\":\"DimCustomer.FirstName\"},{\"queryRef\":\"DimCustomer.Gender\"},{\"queryRef\":\"DimCustomer.EnglishEducation\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimCustomer\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FirstName\"},\"Name\":\"DimCustomer.FirstName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Gender\"},\"Name\":\"DimCustomer.Gender\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishEducation\"},\"Name\":\"DimCustomer.EnglishEducation\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 350.00,
+          "width": 412.00,
+          "x": 10.00,
+          "y": 370.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"be8edfa5c8e14264a032\",\"layouts\":[{\"id\":0,\"position\":{\"x\":939.7245179063361,\"y\":0,\"z\":4000,\"width\":340.2754820936639,\"height\":720.2203856749312}}],\"singleVisual\":{\"visualType\":\"PowerApps_PBI_CV_C29F1DCC_81F5_4973_94AD_0517D44CC06A\",\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 720.22,
+          "width": 340.28,
+          "x": 939.72,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"f9d2e68071c0a2de7037\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.696969696969697,\"y\":0,\"z\":0,\"width\":411.6804407713499,\"height\":359.66942148760336}}],\"singleVisual\":{\"visualType\":\"kpi\",\"projections\":{\"Indicator\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"TrendLine\":[{\"queryRef\":\"DimDate.FullDateAlternateKey\"}],\"Goal\":[{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimDate\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FullDateAlternateKey\"},\"Name\":\"DimDate.FullDateAlternateKey\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 359.67,
+          "width": 411.68,
+          "x": 9.70,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 3",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionb8f25cd380b444b73c09",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"438d0403336eb039c2ac\",\"layouts\":[{\"id\":0,\"position\":{\"x\":904.8175182481752,\"y\":0,\"z\":2000,\"width\":374.8905109489051,\"height\":360}}],\"singleVisual\":{\"visualType\":\"scatterChart\",\"projections\":{\"Size\":[{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"}],\"X\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Series\":[{\"queryRef\":\"DimProduct.Class\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Class\"},\"Name\":\"DimProduct.Class\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"DimProduct\"}},\"Property\":\"Class\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Class\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 360.00,
+          "width": 374.89,
+          "x": 904.82,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"6b0f3add0d79a4d2c9d4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":447.59124087591243,\"height\":360}}],\"singleVisual\":{\"visualType\":\"waterfallChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Category\":[{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Quarter\"},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Month\"},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Day\"}],\"Breakdown\":[{\"queryRef\":\"DimProductCategory.EnglishProductCategoryName\"}],\"Tooltips\":[{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimDate\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimProductCategory\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Quarter\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Quarter\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Day\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"EnglishProductCategoryName\"},\"Name\":\"DimProductCategory.EnglishProductCategoryName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 447.59,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"87b3e8f3792b44704e03\",\"layouts\":[{\"id\":0,\"position\":{\"x\":457.59124087591243,\"y\":0,\"width\":447.59124087591243,\"height\":360,\"z\":1000}}],\"singleVisual\":{\"visualType\":\"funnel\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Category\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}],\"Tooltips\":[{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 447.59,
+          "x": 457.59,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"a8b39335b3c7dca5cd20\",\"layouts\":[{\"id\":0,\"position\":{\"x\":447.82369146005516,\"y\":370.24793388429754,\"z\":4000,\"width\":447.82369146005516,\"height\":349.9724517906336}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 349.97,
+          "width": 447.82,
+          "x": 447.82,
+          "y": 370.25,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"cf5b940f6607921cea29\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":370,\"width\":447.59124087591243,\"height\":350,\"z\":3000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 350.00,
+          "width": 447.59,
+          "x": 0.00,
+          "y": 370.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"d9691e14ec85b6398077\",\"layouts\":[{\"id\":0,\"position\":{\"x\":895.6473829201103,\"y\":370.24793388429754,\"z\":5000,\"width\":384.35261707988985,\"height\":349.9724517906336}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Group\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Details\":[{\"queryRef\":\"DimProduct.Class\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Class\"},\"Name\":\"DimProduct.Class\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 349.97,
+          "width": 384.35,
+          "x": 895.65,
+          "y": 370.25,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiond9bf0a45b092e000b096",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"350ef463c59d183060e1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":924.9635036496351,\"y\":0,\"z\":3000,\"width\":354.7445255474453,\"height\":360}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Category\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}],\"Y2\":[{\"queryRef\":\"Sum(FactInternetSales.OrderQuantity)\"}],\"Series\":[{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Year\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimDate\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"OrderQuantity\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.OrderQuantity)\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Year\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 354.74,
+          "x": 924.96,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"5196a0fed72104bc6e04\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":360,\"z\":1000,\"width\":462.48175182481754,\"height\":360}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Series\":[{\"queryRef\":\"DimProduct.Color\"}],\"Category\":[{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Year\",\"active\":true},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Quarter\"},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Month\"},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Day\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimProduct\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimDate\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Quarter\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Quarter\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Day\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 462.48,
+          "x": 0.00,
+          "y": 360.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"8f2c1626048aa7067509\",\"layouts\":[{\"id\":0,\"position\":{\"x\":462.48175182481754,\"y\":0,\"z\":2000,\"width\":462.48175182481754,\"height\":360}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"},{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"}],\"Category\":[{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Year\"},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Quarter\",\"active\":true},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Month\"},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Day\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimDate\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Quarter\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Quarter\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Day\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 462.48,
+          "x": 462.48,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"a873296150a00ed3aa49\",\"layouts\":[{\"id\":0,\"position\":{\"x\":462,\"y\":360,\"width\":462,\"height\":360,\"z\":4000}}],\"singleVisual\":{\"visualType\":\"lineClusteredColumnComboChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}],\"Y2\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.OrderQuantity)\"}],\"Series\":[{\"queryRef\":\"DimProductCategory.EnglishProductCategoryName\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimProductCategory\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"OrderQuantity\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.OrderQuantity)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"EnglishProductCategoryName\"},\"Name\":\"DimProductCategory.EnglishProductCategoryName\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"OrderQuantity\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 462.00,
+          "x": 462.00,
+          "y": 360.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"d6bf707f07ce997340ca\",\"layouts\":[{\"id\":0,\"position\":{\"x\":925,\"y\":360,\"width\":355,\"height\":360,\"z\":5000}}],\"singleVisual\":{\"visualType\":\"ribbonChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}],\"Series\":[{\"queryRef\":\"DimCustomer.TotalChildren\"}],\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimCustomer\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"TotalChildren\"},\"Name\":\"DimCustomer.TotalChildren\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 355.00,
+          "x": 925.00,
+          "y": 360.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"e5e39a40d00deae1c41b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":462.48175182481754,\"height\":360}}],\"singleVisual\":{\"visualType\":\"areaChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Series\":[{\"queryRef\":\"DimProduct.Color\"}],\"Category\":[{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Year\"},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Quarter\",\"active\":true},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Month\"},{\"queryRef\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Day\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimProduct\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimDate\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Year\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Quarter\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Quarter\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Month\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Name\":\"Variation\",\"Property\":\"FullDateAlternateKey\"}},\"Hierarchy\":\"Date Hierarchy\"}},\"Level\":\"Day\"},\"Name\":\"DimDate.FullDateAlternateKey.Variation.Date Hierarchy.Day\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 462.48,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 4",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionedabf722d98d9716c40b",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"166d03c4e9e755933562\",\"layouts\":[{\"id\":0,\"position\":{\"x\":419.6143250688705,\"y\":540.3856749311295,\"z\":6000,\"width\":439.00826446280996,\"height\":179.83471074380168}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"DimDate.FullDateAlternateKey\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimDate\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FullDateAlternateKey\"},\"Name\":\"DimDate.FullDateAlternateKey\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"FullDateAlternateKey\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 179.83,
+          "width": 439.01,
+          "x": 419.61,
+          "y": 540.39,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"3724f3f57bd50a600000\",\"layouts\":[{\"id\":0,\"position\":{\"x\":859.504132231405,\"y\":359.66942148760336,\"z\":5000,\"width\":420.4958677685951,\"height\":360.55096418732785}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"},{\"queryRef\":\"DimProduct.Color\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimProduct\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 360.55,
+          "width": 420.50,
+          "x": 859.50,
+          "y": 359.67,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"5132d3df49079075161b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":360.55096418732785,\"z\":2000,\"width\":420.4958677685951,\"height\":359.66942148760336}}],\"singleVisual\":{\"visualType\":\"shapeMap\",\"projections\":{\"Value\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Category\":[{\"queryRef\":\"DimGeography.StateProvinceName\"}],\"Tooltips\":[{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimGeography\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"StateProvinceName\"},\"Name\":\"DimGeography.StateProvinceName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}},\"max\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'maxColor'\"}}}},\"nullColoringStrategy\":{\"strategy\":{\"expr\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}],\"shape\":[{\"properties\":{\"map\":{\"geoJson\":{\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'shared'\"}}},\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'usa.states.topo'\"}}},\"content\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"SharedResources\",\"PackageType\":2,\"ItemName\":\"usa.states.topo\"}}}}},\"projectionEnum\":{\"expr\":{\"Literal\":{\"Value\":\"'albersUsa'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sales by Country and Category'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 359.67,
+          "width": 420.50,
+          "x": 0.00,
+          "y": 360.55,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"68fd5dbdc7760e330b2d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":859.504132231405,\"y\":0,\"z\":3000,\"width\":420.4958677685951,\"height\":359.66942148760336}}],\"singleVisual\":{\"visualType\":\"gauge\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"MinValue\":[{\"queryRef\":\"FactInternetSales.Min Value\"}],\"MaxValue\":[{\"queryRef\":\"FactInternetSales.Max Value\"}],\"TargetValue\":[{\"queryRef\":\"FactInternetSales.Target Value\"}],\"Tooltips\":[{\"queryRef\":\"Sum(FactInternetSales.TaxAmt)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Min Value\"},\"Name\":\"FactInternetSales.Min Value\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Max Value\"},\"Name\":\"FactInternetSales.Max Value\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Target Value\"},\"Name\":\"FactInternetSales.Target Value\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TaxAmt\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.TaxAmt)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'SalesAmount Gauge'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 359.67,
+          "width": 420.50,
+          "x": 859.50,
+          "y": 0.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"6cbc05bb7443ca507c90\",\"layouts\":[{\"id\":0,\"position\":{\"x\":416.0881542699725,\"y\":0,\"z\":1000,\"width\":443.41597796143253,\"height\":359.66942148760336}}],\"singleVisual\":{\"visualType\":\"filledMap\",\"projections\":{\"Category\":[{\"queryRef\":\"DimGeography.EnglishCountryRegionName\",\"active\":true},{\"queryRef\":\"DimGeography.StateProvinceName\"}],\"Tooltips\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Series\":[{\"queryRef\":\"DimProductCategory.EnglishProductCategoryName\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimGeography\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimProductCategory\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishCountryRegionName\"},\"Name\":\"DimGeography.EnglishCountryRegionName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"StateProvinceName\"},\"Name\":\"DimGeography.StateProvinceName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"EnglishProductCategoryName\"},\"Name\":\"DimProductCategory.EnglishProductCategoryName\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}},\"max\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'maxColor'\"}}}},\"nullColoringStrategy\":{\"strategy\":{\"expr\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sales by Country and Category'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 359.67,
+          "width": 443.42,
+          "x": 416.09,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"755baf7d7e1be0497c9e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":420.4958677685951,\"height\":359.66942148760336}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"DimGeography.EnglishCountryRegionName\",\"active\":true},{\"queryRef\":\"DimGeography.StateProvinceName\"}],\"Size\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Series\":[{\"queryRef\":\"DimProductCategory.EnglishProductCategoryName\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimGeography\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"DimProductCategory\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishCountryRegionName\"},\"Name\":\"DimGeography.EnglishCountryRegionName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"EnglishProductCategoryName\"},\"Name\":\"DimProductCategory.EnglishProductCategoryName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"StateProvinceName\"},\"Name\":\"DimGeography.StateProvinceName\"}]},\"drillFilterOtherVisuals\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Sales by Country and Category'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 359.67,
+          "width": 420.50,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b64cf200b40c032a9d12\",\"layouts\":[{\"id\":0,\"position\":{\"x\":420.4958677685951,\"y\":360.55096418732785,\"z\":4000,\"width\":439.00826446280996,\"height\":179.83471074380168}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 179.83,
+          "width": 439.01,
+          "x": 420.50,
+          "y": 360.55,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

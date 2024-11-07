@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "SQL7v3"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e6150aaf-7046-4ba8-b721-81141938b95a"
+  }
+}

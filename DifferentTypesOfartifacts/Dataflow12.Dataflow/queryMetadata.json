@@ -1,0 +1,16 @@
+{
+  "formatVersion": "202412",
+  "dataflowOptions": {
+    "computeEngineSettings": {},
+    "name": "Dataflow 1",
+    "queryGroups": [],
+    "documentLocale": "en-US",
+    "queriesMetadata": {
+      "Table": {
+        "queryId": "97494915-fd2d-4c62-a50d-bc8bebeed471",
+        "queryName": "Table"
+      }
+    },
+    "connectionOverrides": []
+  }
+}

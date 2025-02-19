@@ -3,7 +3,6 @@
   "datasetReference": {
     "byPath": {
       "path": "../ParamsUsageV3.SemanticModel"
-    },
-    "byConnection": null
+    }
   }
 }

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Committed Report From subfolder (directory )"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "68c27cf5-1ae0-b914-4fba-5b6d4ff1a947"
+  }
+}

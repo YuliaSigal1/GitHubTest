@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Committed Dataset  Subfolder Root"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "786b4807-f01f-a0d8-4afa-6bd4da1a9c2f"
+  }
+}

@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "SemanticModel",
-    "displayName": "Updated Dataset subfolder root "
+    "type": "Report",
+    "displayName": "Updated Report subfolder root"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "78875509-a608-90c4-4cf1-58a90f9869e2"
+    "logicalId": "af7aeef1-4b95-aa73-47e1-89632334c23f"
   }
 }

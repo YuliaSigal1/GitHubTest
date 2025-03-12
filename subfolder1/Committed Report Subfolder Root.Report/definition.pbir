@@ -2,7 +2,7 @@
   "version": "4.0",
   "datasetReference": {
     "byPath": {
-      "path": "../Committed Dataset  Subfolder Root.SemanticModel"
+      "path": "../../Committed Dataset  Subfolder Root.SemanticModel"
     }
   }
 }

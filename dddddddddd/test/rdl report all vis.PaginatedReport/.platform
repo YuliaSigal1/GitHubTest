@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "PaginatedReport",
+    "displayName": "rdl report all vis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "76b4d7e2-85f4-a207-4e06-77273da4594a"
+  }
+}

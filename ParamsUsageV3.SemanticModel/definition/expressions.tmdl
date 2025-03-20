@@ -23,7 +23,7 @@ expression AnyParam = "uu63" meta [IsParameterQuery=true, Type="Any", IsParamete
 
 	annotation PBI_ResultType = Text
 
-expression DateParam = #datetime(2002, 2, 8, 0, 0, 0) meta [IsParameterQuery=true, List={#datetime(2000, 1, 1, 0, 0, 0), #datetime(2002, 2, 8, 0, 0, 0), #datetime(2003, 12, 8, 0, 0, 0), #datetime(2007, 7, 9, 0, 0, 0)}, DefaultValue=#datetime(2000, 1, 1, 0, 0, 0), Type="DateTime", IsParameterQueryRequired=true]
+expression DateParam = #datetime(2003, 2, 8, 0, 0, 0) meta [IsParameterQuery=true, List={#datetime(2000, 1, 1, 0, 0, 0), #datetime(2002, 2, 8, 0, 0, 0), #datetime(2003, 12, 8, 0, 0, 0), #datetime(2007, 7, 9, 0, 0, 0)}, DefaultValue=#datetime(2000, 1, 1, 0, 0, 0), Type="DateTime", IsParameterQueryRequired=true]
 
 	annotation PBI_NavigationStepName = Navigation
 

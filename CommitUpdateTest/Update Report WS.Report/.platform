@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Update Report WS"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "93aac345-dcfc-a6ce-4870-7d08d51ab8d5"
+  }
+}

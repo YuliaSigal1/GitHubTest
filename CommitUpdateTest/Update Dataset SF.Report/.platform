@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Update Dataset SF"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "43edc651-f6cd-aa90-4d2e-e9a44f053685"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Report Workspace Update"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7a4941f3-1925-bc86-487a-0d39530f2788"
+  }
+}

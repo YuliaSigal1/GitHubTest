@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Report Workspace Commit"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "231127f5-c7d1-bfc1-422f-754b761c1a14"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Dataset Subfolder Update"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "341896de-e45e-8c93-4b67-9b512255b0e2"
+  }
+}

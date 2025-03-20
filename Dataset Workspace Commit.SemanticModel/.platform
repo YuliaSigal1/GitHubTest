@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Dataset Workspace Commit"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e9f7b0bc-483c-b9aa-4138-c7bcb880002c"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/graphqlApi/definition/1.0.0/schema.json",
+  "datasources": [
+    {
+      "objects": [
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "DatabaseVersion": "DatabaseVersion",
+            "ModifiedDate": "ModifiedDate",
+            "SystemInformationID": "SystemInformationID",
+            "VersionDate": "VersionDate"
+          },
+          "graphqlType": "BuildVersion",
+          "relationships": [],
+          "sourceObject": "dbo.BuildVersion",
+          "sourceObjectType": "Table"
+        },
+        {
+          "actions": {
+            "Query": "Enabled",
+            "Query_by_pk": "Enabled",
+            "Create": "Enabled",
+            "Update": "Enabled",
+            "Delete": "Enabled"
+          },
+          "fieldMappings": {
+            "ErrorLine": "ErrorLine",
+            "ErrorLogID": "ErrorLogID",
+            "ErrorMessage": "ErrorMessage",
+            "ErrorNumber": "ErrorNumber",
+            "ErrorProcedure": "ErrorProcedure",
+            "ErrorSeverity": "ErrorSeverity",
+            "ErrorState": "ErrorState",
+            "ErrorTime": "ErrorTime",
+            "UserName": "UserName"
+          },
+          "graphqlType": "ErrorLog",
+          "relationships": [],
+          "sourceObject": "dbo.ErrorLog",
+          "sourceObjectType": "Table"
+        }
+      ],
+      "sourceItemId": "145b9de7-f8b6-9edb-42f7-437d033a9847",
+      "sourceType": "SqlDbNative",
+      "sourceWorkspaceId": "00000000-0000-0000-0000-000000000000"
+    }
+  ]
+}

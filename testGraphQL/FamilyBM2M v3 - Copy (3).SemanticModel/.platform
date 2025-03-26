@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "Lakehouse",
-    "displayName": "lakehouse111"
+    "type": "SemanticModel",
+    "displayName": "FamilyBM2M v3 - Copy (3)"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "e7321ebe-fb3c-bfa8-463f-b9e7bb059bcb"
+    "logicalId": "8dc17fea-2535-a064-4a4b-b96a4662dcb1"
   }
 }

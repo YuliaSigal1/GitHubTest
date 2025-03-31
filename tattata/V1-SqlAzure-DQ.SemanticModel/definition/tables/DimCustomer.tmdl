@@ -1,0 +1,405 @@
+table DimCustomer
+
+	column CustomerKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: none
+		sourceColumn: GeographyKey
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerAlternateKey
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(15)
+		summarizeBy: none
+		sourceColumn: CustomerAlternateKey
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		sourceProviderType: nvarchar(8)
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column MiddleName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: MiddleName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column NameStyle
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		summarizeBy: none
+		sourceColumn: NameStyle
+
+		annotation Format = <Format Format="Boolean" />
+
+		annotation DataTypeAtRefresh = Boolean#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column BirthDate
+		dataType: dateTime
+		formatString: dddd\, mmmm d\, yyyy
+		sourceProviderType: date
+		summarizeBy: none
+		sourceColumn: BirthDate
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="1033" Group="LongDate" FormatString="dddd, MMMM d, yyyy" /></DateTimes></Format>
+
+		annotation DataTypeAtRefresh = DateTime#####Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaritalStatus
+		dataType: string
+		sourceProviderType: nchar
+		summarizeBy: none
+		sourceColumn: MaritalStatus
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Suffix
+		dataType: string
+		sourceProviderType: nvarchar(10)
+		summarizeBy: none
+		sourceColumn: Suffix
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		sourceProviderType: nvarchar(1)
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailAddress
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: EmailAddress
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearlyIncome
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: money
+		summarizeBy: sum
+		sourceColumn: YearlyIncome
+
+		annotation Format = <Format Format="CurrencyGeneral" ThousandSeparator="True"><Currency LCID="1033" DisplayName="$ English (United States)" Symbol="$" PositivePattern="0" NegativePattern="0" /></Format>
+
+		annotation DataTypeAtRefresh = Decimal#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalChildren
+		dataType: int64
+		formatString: 0
+		sourceProviderType: tinyint
+		summarizeBy: sum
+		sourceColumn: TotalChildren
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberChildrenAtHome
+		dataType: int64
+		formatString: 0
+		sourceProviderType: tinyint
+		summarizeBy: sum
+		sourceColumn: NumberChildrenAtHome
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishEducation
+		dataType: string
+		sourceProviderType: nvarchar(40)
+		summarizeBy: none
+		sourceColumn: EnglishEducation
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishEducation
+		dataType: string
+		sourceProviderType: nvarchar(40)
+		summarizeBy: none
+		sourceColumn: SpanishEducation
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchEducation
+		dataType: string
+		sourceProviderType: nvarchar(40)
+		summarizeBy: none
+		sourceColumn: FrenchEducation
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishOccupation
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		summarizeBy: none
+		sourceColumn: EnglishOccupation
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishOccupation
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		summarizeBy: none
+		sourceColumn: SpanishOccupation
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchOccupation
+		dataType: string
+		sourceProviderType: nvarchar(100)
+		summarizeBy: none
+		sourceColumn: FrenchOccupation
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column HouseOwnerFlag
+		dataType: string
+		sourceProviderType: nchar
+		summarizeBy: none
+		sourceColumn: HouseOwnerFlag
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberCarsOwned
+		dataType: int64
+		formatString: 0
+		sourceProviderType: tinyint
+		summarizeBy: sum
+		sourceColumn: NumberCarsOwned
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine1
+		dataType: string
+		sourceProviderType: nvarchar(120)
+		summarizeBy: none
+		sourceColumn: AddressLine1
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine2
+		dataType: string
+		sourceProviderType: nvarchar(120)
+		summarizeBy: none
+		sourceColumn: AddressLine2
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		sourceProviderType: nvarchar(20)
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateFirstPurchase
+		dataType: dateTime
+		formatString: dddd\, mmmm d\, yyyy
+		sourceProviderType: date
+		summarizeBy: none
+		sourceColumn: DateFirstPurchase
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="1033" Group="LongDate" FormatString="dddd, MMMM d, yyyy" /></DateTimes></Format>
+
+		annotation DataTypeAtRefresh = DateTime#####Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column CommuteDistance
+		dataType: string
+		sourceProviderType: nvarchar(15)
+		summarizeBy: none
+		sourceColumn: CommuteDistance
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCustomer-19e75c86-cdbc-42d9-adec-bfc52b0c6208 = query
+		mode: directQuery
+		source
+			query =
+				select [$Table].[CustomerKey] as [CustomerKey],
+				    [$Table].[GeographyKey] as [GeographyKey],
+				    [$Table].[CustomerAlternateKey] as [CustomerAlternateKey],
+				    [$Table].[Title] as [Title],
+				    [$Table].[FirstName] as [FirstName],
+				    [$Table].[MiddleName] as [MiddleName],
+				    [$Table].[LastName] as [LastName],
+				    [$Table].[NameStyle] as [NameStyle],
+				    [$Table].[BirthDate] as [BirthDate],
+				    [$Table].[MaritalStatus] as [MaritalStatus],
+				    [$Table].[Suffix] as [Suffix],
+				    [$Table].[Gender] as [Gender],
+				    [$Table].[EmailAddress] as [EmailAddress],
+				    [$Table].[YearlyIncome] as [YearlyIncome],
+				    [$Table].[TotalChildren] as [TotalChildren],
+				    [$Table].[NumberChildrenAtHome] as [NumberChildrenAtHome],
+				    [$Table].[EnglishEducation] as [EnglishEducation],
+				    [$Table].[SpanishEducation] as [SpanishEducation],
+				    [$Table].[FrenchEducation] as [FrenchEducation],
+				    [$Table].[EnglishOccupation] as [EnglishOccupation],
+				    [$Table].[SpanishOccupation] as [SpanishOccupation],
+				    [$Table].[FrenchOccupation] as [FrenchOccupation],
+				    [$Table].[HouseOwnerFlag] as [HouseOwnerFlag],
+				    [$Table].[NumberCarsOwned] as [NumberCarsOwned],
+				    [$Table].[AddressLine1] as [AddressLine1],
+				    [$Table].[AddressLine2] as [AddressLine2],
+				    [$Table].[Phone] as [Phone],
+				    [$Table].[DateFirstPurchase] as [DateFirstPurchase],
+				    [$Table].[CommuteDistance] as [CommuteDistance]
+				from [dbo].[DimCustomer] as [$Table]
+			dataSource: 27c60bd4-ce7a-424f-a840-3d80c88b81da
+
+	annotation PBI_Id = 912ec7cc-7ca7-4427-a9e7-3b84f45e571b
+
+	annotation LinkedQueryName = DimCustomer
+

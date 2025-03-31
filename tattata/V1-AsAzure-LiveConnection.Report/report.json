@@ -1,0 +1,59 @@
+{
+  "config": "{\"version\":\"3.8\",\"activeSectionIndex\":0,\"baseTheme\":\"CY17SU12\",\"defaultDrillFilterOtherVisuals\":true}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "CY17SU12",
+            "path": "BaseThemes/CY17SU12.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0f0d0e3e6d6adf608187\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":16,\"z\":1,\"width\":512,\"height\":352}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"DimGeography.EnglishCountryRegionName\",\"active\":true}],\"Size\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimGeography\"},{\"Name\":\"f\",\"Entity\":\"FactInternetSales\"}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishCountryRegionName\"},\"Name\":\"DimGeography.EnglishCountryRegionName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapControls\":[{\"properties\":{\"autoZoom\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 352.00,
+          "width": 512.00,
+          "x": 16.00,
+          "y": 16.00,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"1731ce7554d0675fef10\",\"layouts\":[{\"id\":0,\"position\":{\"x\":672,\"y\":16,\"z\":3,\"width\":576,\"height\":320}}],\"singleVisual\":{\"visualType\":\"stackedAreaChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DimReseller.BankName\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(FactResellerSales.SalesAmount)\"}],\"Series\":[{\"queryRef\":\"DimReseller.BusinessType\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimReseller\"},{\"Name\":\"f\",\"Entity\":\"FactResellerSales\"}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactResellerSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"BankName\"},\"Name\":\"DimReseller.BankName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"BusinessType\"},\"Name\":\"DimReseller.BusinessType\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 576.00,
+          "x": 672.00,
+          "y": 16.00,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"18e68bd7e3a53399bd1b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":378,\"width\":512,\"height\":342,\"z\":2}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DimCustomer.EnglishEducation\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimCustomer\"},{\"Name\":\"f\",\"Entity\":\"FactInternetSales\"}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishEducation\"},\"Name\":\"DimCustomer.EnglishEducation\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 342.00,
+          "width": 512.00,
+          "x": 16.00,
+          "y": 378.00,
+          "z": 2.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

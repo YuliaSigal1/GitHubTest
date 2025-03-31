@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "V1-AsAzure-LiveConnection"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d0179b80-d14e-ad82-4ce5-823a44c5ece6"
+  }
+}

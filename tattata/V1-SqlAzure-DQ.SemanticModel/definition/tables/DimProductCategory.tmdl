@@ -1,0 +1,84 @@
+table DimProductCategory
+
+	column ProductCategoryKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryAlternateKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: none
+		sourceColumn: ProductCategoryAlternateKey
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishProductCategoryName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: EnglishProductCategoryName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishProductCategoryName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: SpanishProductCategoryName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchProductCategoryName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: FrenchProductCategoryName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProductCategory-388ba6e5-809e-4e12-afa2-af38b08aabd6 = query
+		mode: directQuery
+		source
+			query =
+				select [$Table].[ProductCategoryKey] as [ProductCategoryKey],
+				    [$Table].[ProductCategoryAlternateKey] as [ProductCategoryAlternateKey],
+				    [$Table].[EnglishProductCategoryName] as [EnglishProductCategoryName],
+				    [$Table].[SpanishProductCategoryName] as [SpanishProductCategoryName],
+				    [$Table].[FrenchProductCategoryName] as [FrenchProductCategoryName]
+				from [dbo].[DimProductCategory] as [$Table]
+			dataSource: ef8f797b-f983-4a10-840c-ec741da99c3e
+
+	annotation PBI_Id = bf7393c1-7c53-40bf-aa95-721c889b8e04
+
+	annotation LinkedQueryName = DimProductCategory
+

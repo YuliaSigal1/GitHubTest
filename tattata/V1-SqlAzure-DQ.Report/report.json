@@ -1,0 +1,48 @@
+{
+  "config": "{\"version\":\"2.4\",\"activeSectionIndex\":0}",
+  "resourcePackages": [],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"layouts\":[{\"id\":0,\"position\":{\"x\":10.498177399756987,\"y\":402.4301336573512,\"z\":4,\"width\":587.0230862697449,\"height\":270.3280680437424}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Group\":[{\"queryRef\":\"DimProductCategory.EnglishProductCategoryName\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimProductCategory\"},{\"Name\":\"f\",\"Entity\":\"FactInternetSales\"}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishProductCategoryName\"},\"Name\":\"DimProductCategory.EnglishProductCategoryName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"}]}},\"name\":\"VisualContainer2\"}",
+          "height": 270.33,
+          "width": 587.02,
+          "x": 10.50,
+          "y": 402.43,
+          "z": 4.00
+        },
+        {
+          "config": "{\"layouts\":[{\"id\":0,\"position\":{\"x\":111.10571081409478,\"y\":119.85419198055894,\"z\":1,\"width\":411.17861482381534,\"height\":244.08262454434995}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}],\"Category\":[{\"queryRef\":\"DimProduct.Color\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactInternetSales\"},{\"Name\":\"d\",\"Entity\":\"DimProduct\"}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Color\"},\"Name\":\"DimProduct.Color\"}]}},\"name\":\"VisualContainer\"}",
+          "height": 244.08,
+          "width": 411.18,
+          "x": 111.11,
+          "y": 119.85,
+          "z": 1.00
+        },
+        {
+          "config": "{\"layouts\":[{\"id\":0,\"position\":{\"x\":38.493317132442286,\"y\":22.746051032806804,\"z\":2,\"width\":438.2989064398542,\"height\":77.86148238153099}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Sales Dashboard\",\"textStyle\":{\"fontSize\":\"48px\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}},\"name\":\"VisualContainer1\"}",
+          "height": 77.86,
+          "width": 438.30,
+          "x": 38.49,
+          "y": 22.75,
+          "z": 2.00
+        },
+        {
+          "config": "{\"layouts\":[{\"id\":0,\"position\":{\"x\":655.2612393681653,\"y\":33.244228432563794,\"z\":6,\"width\":603.6452004860267,\"height\":378.80923450789794}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"DimGeography.EnglishCountryRegionName\"},{\"queryRef\":\"DimGeography.StateProvinceName\",\"active\":true},{\"queryRef\":\"DimGeography.City\"}],\"Size\":[{\"queryRef\":\"Sum(FactInternetSales.SalesAmount)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimGeography\"},{\"Name\":\"f\",\"Entity\":\"FactInternetSales\"}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"City\"},\"Name\":\"DimGeography.City\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"SalesAmount\"}},\"Function\":0},\"Name\":\"Sum(FactInternetSales.SalesAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"EnglishCountryRegionName\"},\"Name\":\"DimGeography.EnglishCountryRegionName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"StateProvinceName\"},\"Name\":\"DimGeography.StateProvinceName\"}]}},\"name\":\"VisualContainer3\"}",
+          "height": 378.81,
+          "width": 603.65,
+          "x": 655.26,
+          "y": 33.24,
+          "z": 6.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

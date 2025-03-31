@@ -1,0 +1,35 @@
+dataSource 27c60bd4-ce7a-424f-a840-3d80c88b81da = provider
+	connectionString: data source=jxkt4xphz2.database.windows.net;initial catalog="Adventure Works DW Tabular Denali CTP3";persist security info=True;encrypt=True;trustservercertificate=False
+	impersonationMode: impersonateCurrentUser
+	provider: System.Data.SqlClient
+
+dataSource 151a482a-cf05-4ed0-9245-bc250f8fdf1e = provider
+	connectionString: data source=jxkt4xphz2.database.windows.net;initial catalog="Adventure Works DW Tabular Denali CTP3";persist security info=True;encrypt=True;trustservercertificate=False
+	impersonationMode: impersonateCurrentUser
+	provider: System.Data.SqlClient
+
+dataSource 9276fc94-cfb5-43a0-96aa-598e5ba3b12b = provider
+	connectionString: data source=jxkt4xphz2.database.windows.net;initial catalog="Adventure Works DW Tabular Denali CTP3";persist security info=True;encrypt=True;trustservercertificate=False
+	impersonationMode: impersonateCurrentUser
+	provider: System.Data.SqlClient
+
+dataSource ef8f797b-f983-4a10-840c-ec741da99c3e = provider
+	connectionString: data source=jxkt4xphz2.database.windows.net;initial catalog="Adventure Works DW Tabular Denali CTP3";persist security info=True;encrypt=True;trustservercertificate=False
+	impersonationMode: impersonateCurrentUser
+	provider: System.Data.SqlClient
+
+dataSource 7701998d-889b-4b70-a620-cbf5d0d6c4c9 = provider
+	connectionString: data source=jxkt4xphz2.database.windows.net;initial catalog="Adventure Works DW Tabular Denali CTP3";persist security info=True;encrypt=True;trustservercertificate=False
+	impersonationMode: impersonateCurrentUser
+	provider: System.Data.SqlClient
+
+dataSource 1fddd0f3-c168-4490-88d2-5d5e9cb6c6c9 = provider
+	connectionString: data source=jxkt4xphz2.database.windows.net;initial catalog="Adventure Works DW Tabular Denali CTP3";persist security info=True;encrypt=True;trustservercertificate=False
+	impersonationMode: impersonateCurrentUser
+	provider: System.Data.SqlClient
+
+dataSource 2df13e8a-5abe-4e54-9363-dbd201268d4c = provider
+	connectionString: data source=jxkt4xphz2.database.windows.net;initial catalog="Adventure Works DW Tabular Denali CTP3";persist security info=True;encrypt=True;trustservercertificate=False
+	impersonationMode: impersonateCurrentUser
+	provider: System.Data.SqlClient
+

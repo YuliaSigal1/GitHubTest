@@ -1,0 +1,8 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../V1-SqlAzure-DQ.SemanticModel"
+    }
+  }
+}

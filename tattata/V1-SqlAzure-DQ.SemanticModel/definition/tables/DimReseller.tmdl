@@ -1,0 +1,287 @@
+table DimReseller
+
+	column ResellerKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: none
+		sourceColumn: ResellerKey
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: none
+		sourceColumn: GeographyKey
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResellerAlternateKey
+		dataType: string
+		sourceProviderType: nvarchar(15)
+		summarizeBy: none
+		sourceColumn: ResellerAlternateKey
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		sourceProviderType: nvarchar(25)
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column BusinessType
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(20)
+		summarizeBy: none
+		sourceColumn: BusinessType
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResellerName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: ResellerName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumberEmployees
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: NumberEmployees
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderFrequency
+		dataType: string
+		sourceProviderType: char
+		summarizeBy: none
+		sourceColumn: OrderFrequency
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderMonth
+		dataType: int64
+		formatString: 0
+		sourceProviderType: tinyint
+		summarizeBy: sum
+		sourceColumn: OrderMonth
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstOrderYear
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: FirstOrderYear
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastOrderYear
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: LastOrderYear
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductLine
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: ProductLine
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine1
+		dataType: string
+		sourceProviderType: nvarchar(60)
+		summarizeBy: none
+		sourceColumn: AddressLine1
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddressLine2
+		dataType: string
+		sourceProviderType: nvarchar(60)
+		summarizeBy: none
+		sourceColumn: AddressLine2
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnnualSales
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: money
+		summarizeBy: sum
+		sourceColumn: AnnualSales
+
+		annotation Format = <Format Format="CurrencyGeneral" ThousandSeparator="True"><Currency LCID="1033" DisplayName="$ English (United States)" Symbol="$" PositivePattern="0" NegativePattern="0" /></Format>
+
+		annotation DataTypeAtRefresh = Decimal#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column BankName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: BankName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column MinPaymentType
+		dataType: int64
+		formatString: 0
+		sourceProviderType: tinyint
+		summarizeBy: sum
+		sourceColumn: MinPaymentType
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column MinPaymentAmount
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: money
+		summarizeBy: sum
+		sourceColumn: MinPaymentAmount
+
+		annotation Format = <Format Format="CurrencyGeneral" ThousandSeparator="True"><Currency LCID="1033" DisplayName="$ English (United States)" Symbol="$" PositivePattern="0" NegativePattern="0" /></Format>
+
+		annotation DataTypeAtRefresh = Decimal#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnnualRevenue
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: money
+		summarizeBy: sum
+		sourceColumn: AnnualRevenue
+
+		annotation Format = <Format Format="CurrencyGeneral" ThousandSeparator="True"><Currency LCID="1033" DisplayName="$ English (United States)" Symbol="$" PositivePattern="0" NegativePattern="0" /></Format>
+
+		annotation DataTypeAtRefresh = Decimal#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearOpened
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: YearOpened
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimReseller-c14680a2-d4f1-4bbd-bb68-bed01b190d33 = query
+		mode: directQuery
+		source
+			query =
+				select [$Table].[ResellerKey] as [ResellerKey],
+				    [$Table].[GeographyKey] as [GeographyKey],
+				    [$Table].[ResellerAlternateKey] as [ResellerAlternateKey],
+				    [$Table].[Phone] as [Phone],
+				    [$Table].[BusinessType] as [BusinessType],
+				    [$Table].[ResellerName] as [ResellerName],
+				    [$Table].[NumberEmployees] as [NumberEmployees],
+				    [$Table].[OrderFrequency] as [OrderFrequency],
+				    [$Table].[OrderMonth] as [OrderMonth],
+				    [$Table].[FirstOrderYear] as [FirstOrderYear],
+				    [$Table].[LastOrderYear] as [LastOrderYear],
+				    [$Table].[ProductLine] as [ProductLine],
+				    [$Table].[AddressLine1] as [AddressLine1],
+				    [$Table].[AddressLine2] as [AddressLine2],
+				    [$Table].[AnnualSales] as [AnnualSales],
+				    [$Table].[BankName] as [BankName],
+				    [$Table].[MinPaymentType] as [MinPaymentType],
+				    [$Table].[MinPaymentAmount] as [MinPaymentAmount],
+				    [$Table].[AnnualRevenue] as [AnnualRevenue],
+				    [$Table].[YearOpened] as [YearOpened]
+				from [dbo].[DimReseller] as [$Table]
+			dataSource: 7701998d-889b-4b70-a620-cbf5d0d6c4c9
+
+	annotation PBI_Id = 509f50de-cb7e-4fde-bb42-ea60d7f61806
+
+	annotation LinkedQueryName = DimReseller
+

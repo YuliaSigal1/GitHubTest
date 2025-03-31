@@ -1,0 +1,22 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "tabs": [
+      {
+        "id": "5e83ba57-b7ec-472e-a413-f31704b24df7",
+        "title": "Tab",
+        "content": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n// Use \"take\" to view a sample number of records in the table and check the data.\nYOUR_TABLE_HERE\n| take 100\n\n// See how many records are in the table.\nYOUR_TABLE_HERE\n| count\n\n// This query returns the number of ingestions per hour in the given table.\nYOUR_TABLE_HERE\n| summarize IngestionCount = count() by bin(ingestion_time(), 1h)\n\n",
+        "dataSourceId": "35b6f7e8-4a2b-48f6-88e4-470f434d94d5"
+      }
+    ],
+    "dataSources": [
+      {
+        "type": "Fabric",
+        "id": "35b6f7e8-4a2b-48f6-88e4-470f434d94d5",
+        "clusterUri": "",
+        "databaseItemId": "3ff7b91a-4744-9751-4ac1-3da88e5e391d",
+        "databaseItemName": "Eventhousetest"
+      }
+    ]
+  }
+}

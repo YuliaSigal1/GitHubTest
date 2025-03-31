@@ -1,0 +1,14 @@
+model Model
+	defaultMode: directQuery
+	culture: en-US
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+ref table DimCustomer
+ref table DimGeography
+ref table DimProduct
+ref table DimProductCategory
+ref table DimReseller
+ref table FactInternetSales
+ref table FactResellerSales
+

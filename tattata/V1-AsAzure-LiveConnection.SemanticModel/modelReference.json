@@ -1,0 +1,5 @@
+{
+  "version": "2.0",
+  "connectionString": "Data Source=asazure://northeurope.asazure.windows.net/aspbipaasprod;Initial Catalog=AWTabular_NoRLS;Cube=Model",
+  "connectionType": "analysisServicesDatabaseLive"
+}

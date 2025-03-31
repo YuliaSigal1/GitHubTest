@@ -1,0 +1,486 @@
+table DimProduct
+
+	column ProductKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductAlternateKey
+		dataType: string
+		sourceProviderType: nvarchar(25)
+		summarizeBy: none
+		sourceColumn: ProductAlternateKey
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategoryKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryKey
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeightUnitMeasureCode
+		dataType: string
+		sourceProviderType: nchar
+		summarizeBy: none
+		sourceColumn: WeightUnitMeasureCode
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column SizeUnitMeasureCode
+		dataType: string
+		sourceProviderType: nchar
+		summarizeBy: none
+		sourceColumn: SizeUnitMeasureCode
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishProductName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: EnglishProductName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishProductName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: SpanishProductName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchProductName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: FrenchProductName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column StandardCost
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: money
+		summarizeBy: sum
+		sourceColumn: StandardCost
+
+		annotation Format = <Format Format="CurrencyGeneral" ThousandSeparator="True"><Currency LCID="1033" DisplayName="$ English (United States)" Symbol="$" PositivePattern="0" NegativePattern="0" /></Format>
+
+		annotation DataTypeAtRefresh = Decimal#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinishedGoodsFlag
+		dataType: boolean
+		isNullable: false
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		summarizeBy: none
+		sourceColumn: FinishedGoodsFlag
+
+		annotation Format = <Format Format="Boolean" />
+
+		annotation DataTypeAtRefresh = Boolean#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(15)
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column SafetyStockLevel
+		dataType: int64
+		formatString: 0
+		sourceProviderType: smallint
+		summarizeBy: sum
+		sourceColumn: SafetyStockLevel
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReorderPoint
+		dataType: int64
+		formatString: 0
+		sourceProviderType: smallint
+		summarizeBy: sum
+		sourceColumn: ReorderPoint
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ListPrice
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: money
+		summarizeBy: sum
+		sourceColumn: ListPrice
+
+		annotation Format = <Format Format="CurrencyGeneral" ThousandSeparator="True"><Currency LCID="1033" DisplayName="$ English (United States)" Symbol="$" PositivePattern="0" NegativePattern="0" /></Format>
+
+		annotation DataTypeAtRefresh = Decimal#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Size
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: Size
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column SizeRange
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: SizeRange
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weight
+		dataType: double
+		sourceProviderType: float
+		summarizeBy: sum
+		sourceColumn: Weight
+
+		annotation Format = <Format Format="General" />
+
+		annotation DataTypeAtRefresh = Double#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column DaysToManufacture
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: sum
+		sourceColumn: DaysToManufacture
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductLine
+		dataType: string
+		sourceProviderType: nchar
+		summarizeBy: none
+		sourceColumn: ProductLine
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column DealerPrice
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		sourceProviderType: money
+		summarizeBy: sum
+		sourceColumn: DealerPrice
+
+		annotation Format = <Format Format="CurrencyGeneral" ThousandSeparator="True"><Currency LCID="1033" DisplayName="$ English (United States)" Symbol="$" PositivePattern="0" NegativePattern="0" /></Format>
+
+		annotation DataTypeAtRefresh = Decimal#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Class
+		dataType: string
+		sourceProviderType: nchar
+		summarizeBy: none
+		sourceColumn: Class
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Style
+		dataType: string
+		sourceProviderType: nchar
+		summarizeBy: none
+		sourceColumn: Style
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModelName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: ModelName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishDescription
+		dataType: string
+		sourceProviderType: nvarchar(400)
+		summarizeBy: none
+		sourceColumn: EnglishDescription
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchDescription
+		dataType: string
+		sourceProviderType: nvarchar(400)
+		summarizeBy: none
+		sourceColumn: FrenchDescription
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChineseDescription
+		dataType: string
+		sourceProviderType: nvarchar(400)
+		summarizeBy: none
+		sourceColumn: ChineseDescription
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ArabicDescription
+		dataType: string
+		sourceProviderType: nvarchar(400)
+		summarizeBy: none
+		sourceColumn: ArabicDescription
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column HebrewDescription
+		dataType: string
+		sourceProviderType: nvarchar(400)
+		summarizeBy: none
+		sourceColumn: HebrewDescription
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column ThaiDescription
+		dataType: string
+		sourceProviderType: nvarchar(400)
+		summarizeBy: none
+		sourceColumn: ThaiDescription
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column GermanDescription
+		dataType: string
+		sourceProviderType: nvarchar(400)
+		summarizeBy: none
+		sourceColumn: GermanDescription
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column JapaneseDescription
+		dataType: string
+		sourceProviderType: nvarchar(400)
+		summarizeBy: none
+		sourceColumn: JapaneseDescription
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column TurkishDescription
+		dataType: string
+		sourceProviderType: nvarchar(400)
+		summarizeBy: none
+		sourceColumn: TurkishDescription
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		summarizeBy: none
+		sourceColumn: StartDate
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="1033" Group="GeneralDateTimeLong" FormatString="G" /></DateTimes></Format>
+
+		annotation DataTypeAtRefresh = DateTime#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime
+		summarizeBy: none
+		sourceColumn: EndDate
+
+		annotation Format = <Format Format="DateTimeGeneralPattern"><DateTimes><DateTime LCID="1033" Group="GeneralDateTimeLong" FormatString="G" /></DateTimes></Format>
+
+		annotation DataTypeAtRefresh = DateTime#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		sourceProviderType: nvarchar(7)
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimProduct-49c9fabd-ebfe-43a6-b823-951a7707f11f = query
+		mode: directQuery
+		source
+			query =
+				select [$Table].[ProductKey] as [ProductKey],
+				    [$Table].[ProductAlternateKey] as [ProductAlternateKey],
+				    [$Table].[ProductSubcategoryKey] as [ProductSubcategoryKey],
+				    [$Table].[WeightUnitMeasureCode] as [WeightUnitMeasureCode],
+				    [$Table].[SizeUnitMeasureCode] as [SizeUnitMeasureCode],
+				    [$Table].[EnglishProductName] as [EnglishProductName],
+				    [$Table].[SpanishProductName] as [SpanishProductName],
+				    [$Table].[FrenchProductName] as [FrenchProductName],
+				    [$Table].[StandardCost] as [StandardCost],
+				    [$Table].[FinishedGoodsFlag] as [FinishedGoodsFlag],
+				    [$Table].[Color] as [Color],
+				    [$Table].[SafetyStockLevel] as [SafetyStockLevel],
+				    [$Table].[ReorderPoint] as [ReorderPoint],
+				    [$Table].[ListPrice] as [ListPrice],
+				    [$Table].[Size] as [Size],
+				    [$Table].[SizeRange] as [SizeRange],
+				    [$Table].[Weight] as [Weight],
+				    [$Table].[DaysToManufacture] as [DaysToManufacture],
+				    [$Table].[ProductLine] as [ProductLine],
+				    [$Table].[DealerPrice] as [DealerPrice],
+				    [$Table].[Class] as [Class],
+				    [$Table].[Style] as [Style],
+				    [$Table].[ModelName] as [ModelName],
+				    [$Table].[LargePhoto] as [LargePhoto],
+				    [$Table].[EnglishDescription] as [EnglishDescription],
+				    [$Table].[FrenchDescription] as [FrenchDescription],
+				    [$Table].[ChineseDescription] as [ChineseDescription],
+				    [$Table].[ArabicDescription] as [ArabicDescription],
+				    [$Table].[HebrewDescription] as [HebrewDescription],
+				    [$Table].[ThaiDescription] as [ThaiDescription],
+				    [$Table].[GermanDescription] as [GermanDescription],
+				    [$Table].[JapaneseDescription] as [JapaneseDescription],
+				    [$Table].[TurkishDescription] as [TurkishDescription],
+				    [$Table].[StartDate] as [StartDate],
+				    [$Table].[EndDate] as [EndDate],
+				    [$Table].[Status] as [Status]
+				from [dbo].[DimProduct] as [$Table]
+			dataSource: 9276fc94-cfb5-43a0-96aa-598e5ba3b12b
+
+	annotation PBI_Id = 808cf471-4409-4508-9674-7bd90927e45b
+
+	annotation LinkedQueryName = DimProduct
+

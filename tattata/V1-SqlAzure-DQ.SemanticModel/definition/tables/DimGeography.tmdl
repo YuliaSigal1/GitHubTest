@@ -1,0 +1,159 @@
+table DimGeography
+
+	column GeographyKey
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: none
+		sourceColumn: GeographyKey
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		sourceProviderType: nvarchar(30)
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvinceCode
+		dataType: string
+		sourceProviderType: nvarchar(3)
+		summarizeBy: none
+		sourceColumn: StateProvinceCode
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateProvinceName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: StateProvinceName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryRegionCode
+		dataType: string
+		sourceProviderType: nvarchar(3)
+		summarizeBy: none
+		sourceColumn: CountryRegionCode
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishCountryRegionName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: EnglishCountryRegionName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishCountryRegionName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: SpanishCountryRegionName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchCountryRegionName
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		summarizeBy: none
+		sourceColumn: FrenchCountryRegionName
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column PostalCode
+		dataType: string
+		sourceProviderType: nvarchar(15)
+		summarizeBy: none
+		sourceColumn: PostalCode
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryKey
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		summarizeBy: count
+		sourceColumn: SalesTerritoryKey
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	column IpAddressLocator
+		dataType: string
+		sourceProviderType: nvarchar(15)
+		summarizeBy: none
+		sourceColumn: IpAddressLocator
+
+		annotation Format = <Format Format="Text" />
+
+		annotation DataTypeAtRefresh = String#####not a type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimGeography-2679f488-474f-405b-8ede-4d365e8c53d3 = query
+		mode: directQuery
+		source
+			query =
+				select [$Table].[GeographyKey] as [GeographyKey],
+				    [$Table].[City] as [City],
+				    [$Table].[StateProvinceCode] as [StateProvinceCode],
+				    [$Table].[StateProvinceName] as [StateProvinceName],
+				    [$Table].[CountryRegionCode] as [CountryRegionCode],
+				    [$Table].[EnglishCountryRegionName] as [EnglishCountryRegionName],
+				    [$Table].[SpanishCountryRegionName] as [SpanishCountryRegionName],
+				    [$Table].[FrenchCountryRegionName] as [FrenchCountryRegionName],
+				    [$Table].[PostalCode] as [PostalCode],
+				    [$Table].[SalesTerritoryKey] as [SalesTerritoryKey],
+				    [$Table].[IpAddressLocator] as [IpAddressLocator]
+				from [dbo].[DimGeography] as [$Table]
+			dataSource: 151a482a-cf05-4ed0-9245-bc250f8fdf1e
+
+	annotation PBI_Id = 36dd1cd8-ea21-4b6f-81d5-f8326049da58
+
+	annotation LinkedQueryName = DimGeography
+

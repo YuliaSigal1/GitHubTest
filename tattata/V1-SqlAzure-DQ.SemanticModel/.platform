@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "V1-SqlAzure-DQ"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "22a17cb3-597a-88a5-428f-a9e1f1ccf287"
+  }
+}

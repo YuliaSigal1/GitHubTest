@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "CloudRLS v3"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "341ec7d8-edbe-b8ac-4504-e280a5047707"
+  }
+}

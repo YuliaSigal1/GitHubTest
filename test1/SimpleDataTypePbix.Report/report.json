@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.22\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY21SU04\",\"version\":\"5.22\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY21SU04",
+            "path": "BaseThemes/CY21SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"187L\"}}}}}]}}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"38028909334e54a1d8cf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.026109660574413,\"y\":0,\"z\":0,\"width\":1269.9738903394257,\"height\":720.2088772845954}}],\"singleVisual\":{\"visualType\":\"rdlVisual\",\"drillFilterOtherVisuals\":true,\"objects\":{\"reportInfo\":[{\"properties\":{\"reportId\":{\"expr\":{\"Literal\":{\"Value\":\"'85eac5cb-cf8d-4dee-a0fd-0865f7756f30'\"}}},\"workspaceId\":{\"expr\":{\"Literal\":{\"Value\":\"'8f16837e-857b-4a66-9ee8-24a3b0fddcef'\"}}}}}],\"parameterMapping\":[{\"properties\":{\"mappings\":{\"expr\":{\"Literal\":{\"Value\":\"'[]'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 720.21,
+          "width": 1269.97,
+          "x": 10.03,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

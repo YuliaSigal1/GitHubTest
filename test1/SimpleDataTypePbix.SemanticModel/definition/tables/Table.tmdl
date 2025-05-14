@@ -1,0 +1,76 @@
+table Table
+	lineageTag: cd6e5bcb-87ec-4fd3-bcff-ff9733190cf7
+
+	column Date
+		dataType: dateTime
+		formatString: m/d/yyyy h:nn:ss AM/PM
+		lineageTag: 62614303-f73e-4e55-8830-85aaec89eaa6
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: ffeb112d-8208-44fe-a094-b6456b8c04a9
+			defaultHierarchy: LocalDateTable_4db0c44d-4849-40b5-88e7-90c07dbea6b8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation DataTypeAtRefresh = DateTime#####Date
+
+		annotation PBI_NameAtRefresh = Date
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+		annotation PBI_ChangedProperties = ["DataType","FormatString"]
+
+		annotation Format = <Format Format="DateTimeCustom"><DateTimes><DateTime LCID="1033" Group="GeneralDateTimeLong" FormatString="M/d/yyyy h:mm:ss tt" /></DateTimes></Format>
+
+	column Int
+		dataType: int64
+		formatString: 0
+		lineageTag: 207cd388-3ecd-4705-ae5c-1738c968f4ee
+		summarizeBy: sum
+		sourceColumn: Int
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="NumberWhole" Accuracy="0" />
+
+		annotation DataTypeAtRefresh = Int64#####not a type
+
+		annotation PBI_NameAtRefresh = Int
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	column Bool
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ccc4795b-9738-45d1-9c62-abbe545ee604
+		summarizeBy: none
+		sourceColumn: Bool
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation Format = <Format Format="Boolean" />
+
+		annotation DataTypeAtRefresh = Boolean#####not a type
+
+		annotation PBI_NameAtRefresh = Bool
+
+		annotation PBI_WasHiddenAtRefresh = False
+
+	partition Table-98c4888a-a2e9-420a-86fb-b98d0c2da738 = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMtQ31DcyMDJU0lEC4ZKi0lSlWJ1oJSOEuBGyuDFC3BiI0xJziiESJggJE4RELAA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Date = _t, Int = _t, Bool = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Date", type date}, {"Int", Int64.Type}, {"Bool", type logical}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_DescriptionAtRefresh
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

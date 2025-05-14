@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.22\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY21SU04\",\"version\":\"5.22\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.37\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY21SU04\",\"version\":\"5.22\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -27,7 +27,7 @@
       "name": "ReportSection",
       "visualContainers": [
         {
-          "config": "{\"name\":\"38028909334e54a1d8cf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.026109660574413,\"y\":0,\"z\":0,\"width\":1269.9738903394257,\"height\":720.2088772845954}}],\"singleVisual\":{\"visualType\":\"rdlVisual\",\"drillFilterOtherVisuals\":true,\"objects\":{\"reportInfo\":[{\"properties\":{\"reportId\":{\"expr\":{\"Literal\":{\"Value\":\"'85eac5cb-cf8d-4dee-a0fd-0865f7756f30'\"}}},\"workspaceId\":{\"expr\":{\"Literal\":{\"Value\":\"'8f16837e-857b-4a66-9ee8-24a3b0fddcef'\"}}}}}],\"parameterMapping\":[{\"properties\":{\"mappings\":{\"expr\":{\"Literal\":{\"Value\":\"'[]'\"}}}}}]}}}",
+          "config": "{\"name\":\"38028909334e54a1d8cf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.026109660574413,\"y\":0,\"z\":0,\"width\":1269.9738903394257,\"height\":720.2088772845954}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"Sum(Table.Int)\"}],\"Category\":[{\"queryRef\":\"Table.Bool\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Table\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Int\"}},\"Function\":0},\"Name\":\"Sum(Table.Int)\",\"NativeReferenceName\":\"Int\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Bool\"},\"Name\":\"Table.Bool\",\"NativeReferenceName\":\"Bool\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Int\"}},\"Function\":0}}}]},\"autoSelectVisualType\":false,\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{}}}",
           "filters": "[]",
           "height": 720.21,
           "width": 1269.97,

@@ -9,6 +9,14 @@
         "itemId": "78d62b48-dd94-440c-8dd9-a55d36196a0e",
         "workspaceId": "ecaaecab-f373-43f9-9b51-e55a93f93386"
       }
+    },
+    {
+      "name": "f",
+      "note": "",
+      "type": "ConnectionReference",
+      "value": {
+        "connectionId": "f217d203-3720-4152-935d-7abf4c81d94c"
+      }
     }
   ]
 }

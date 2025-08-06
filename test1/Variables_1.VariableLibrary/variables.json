@@ -17,6 +17,12 @@
       "value": {
         "connectionId": "f217d203-3720-4152-935d-7abf4c81d94c"
       }
+    },
+    {
+      "name": "ff",
+      "note": "",
+      "type": "Number",
+      "value": 7
     }
   ]
 }

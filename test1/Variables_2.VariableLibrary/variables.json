@@ -8,6 +8,46 @@
       "value": {
         "connectionId": "fb075a0b-2d96-44b1-9fea-42381564cb93"
       }
+    },
+    {
+      "name": "a",
+      "note": "",
+      "type": "ConnectionReference",
+      "value": {
+        "connectionId": "9437227e-3da6-4d6a-aaa7-3713590858df"
+      }
+    },
+    {
+      "name": "c",
+      "note": "",
+      "type": "ConnectionReference",
+      "value": {
+        "connectionId": "39e02c3c-94dc-4ea0-aa4b-4aae6d1b2d59"
+      }
+    },
+    {
+      "name": "b",
+      "note": "",
+      "type": "ConnectionReference",
+      "value": {
+        "connectionId": "6122c763-925a-4513-bb4e-c787663b2634"
+      }
+    },
+    {
+      "name": "d",
+      "note": "",
+      "type": "ConnectionReference",
+      "value": {
+        "connectionId": "8022e6c8-8abc-44eb-8c7f-5126f1966f1d"
+      }
+    },
+    {
+      "name": "e",
+      "note": "",
+      "type": "ConnectionReference",
+      "value": {
+        "connectionId": "fb075a0b-2d96-44b1-9fea-42381564cb93"
+      }
     }
   ]
 }

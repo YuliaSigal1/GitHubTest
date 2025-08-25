@@ -1,0 +1,41 @@
+table 'Issues and Promotions'
+	lineageTag: 23aadc6a-e0e9-4fc1-8148-ff302bc4d301
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8853c60a-1851-41a8-bfce-c576e0903de2
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Issue
+		dataType: string
+		lineageTag: 4a32be9e-3e79-4e0e-bef4-2dada248efaf
+		summarizeBy: none
+		sourceColumn: Issue
+
+		annotation SummarizationSetBy = Automatic
+
+	column Promotion
+		dataType: string
+		lineageTag: d76252a5-c2c5-48ff-818a-dfa66b9c9b46
+		summarizeBy: none
+		sourceColumn: Promotion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Issues and Promotions-4fcca441-ca28-47a0-ade9-7ea141432e0e' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("jxkt4xphz2.database.windows.net", "SalesReturnsSampleDec2019"),
+				    dbo_IssuesPromotions = Source{[Schema="dbo",Item="Issues and Promotions"]}[Data]
+				in
+				    #"dbo_IssuesPromotions"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

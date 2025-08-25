@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "5-MS PBI Demo - Sales & Returns Sample v201912 - Copy (5)"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "10f43168-f81e-adc5-4a87-871996f8c92d"
+  }
+}

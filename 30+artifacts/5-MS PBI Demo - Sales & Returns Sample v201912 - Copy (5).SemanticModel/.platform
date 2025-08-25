@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "5-MS PBI Demo - Sales & Returns Sample v201912 - Copy (5)"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a263419f-63be-acc1-4a68-2ebe6febe2ad"
+  }
+}

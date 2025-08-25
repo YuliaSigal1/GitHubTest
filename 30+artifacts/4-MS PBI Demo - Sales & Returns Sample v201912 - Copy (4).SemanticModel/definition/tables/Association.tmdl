@@ -1,0 +1,71 @@
+table Association
+	lineageTag: 13c14462-1e88-47b9-881a-c393c8262e52
+
+	column RuleID
+		dataType: int64
+		formatString: 0
+		lineageTag: 00a350d8-94fa-4f75-acc1-ab428783d3a5
+		summarizeBy: count
+		sourceColumn: RuleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeftItemSetId
+		dataType: int64
+		formatString: 0
+		lineageTag: 77aa8b7a-c9ff-4c78-b13d-7d69586a69a0
+		summarizeBy: none
+		sourceColumn: LeftItemSetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column RightItemSetId
+		dataType: int64
+		formatString: 0
+		lineageTag: f982a5f5-379c-471d-a7d9-f2edeb860436
+		summarizeBy: none
+		sourceColumn: RightItemSetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Probability
+		dataType: double
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: c0cf8d86-cd85-4299-8415-5d688c0405ba
+		summarizeBy: sum
+		sourceColumn: Probability
+
+		annotation SummarizationSetBy = Automatic
+
+	column Importance
+		dataType: double
+		lineageTag: 299af07d-647d-48c7-bff7-4d8c32f2da7f
+		summarizeBy: sum
+		sourceColumn: Importance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Support
+		dataType: int64
+		formatString: 0
+		lineageTag: 2efa8513-3a96-4efc-9148-5312e93b7dc3
+		summarizeBy: sum
+		sourceColumn: Support
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Association-7d9865cc-e0f7-465e-8a07-5176d6094e2a = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("jxkt4xphz2.database.windows.net", "SalesReturnsSampleDec2019"),
+				    dbo_Association = Source{[Schema="dbo",Item="Association"]}[Data]
+				in
+				    #"dbo_Association"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

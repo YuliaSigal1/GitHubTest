@@ -1,0 +1,127 @@
+table Customer
+	lineageTag: 45db0bb8-02c5-4853-ad3e-fa9857deef8a
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: d20107ae-02b6-44d5-a64d-c5599f12eb08
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unit
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ed23fd4-4469-4e8b-9924-89c9ab3a6e8f
+		summarizeBy: sum
+		sourceColumn: Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: 1eb5dbc6-13f2-4455-9ef5-455e67472f47
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 36ffd89c-5f54-4a28-908a-95a36161a7a7
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segment
+		dataType: string
+		lineageTag: 56680862-de23-4cb3-91f8-9e9f86d141be
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: c5094eac-d86f-4b4f-b99a-0fe71f4fed87
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Issue
+		dataType: string
+		lineageTag: cdba7f32-0423-46d4-adbe-637a09bae0f7
+		summarizeBy: none
+		sourceColumn: Issue
+
+		annotation SummarizationSetBy = Automatic
+
+	column Promotion
+		dataType: string
+		lineageTag: 2a249c54-7882-4d1e-80e6-c07262f15da9
+		summarizeBy: none
+		sourceColumn: Promotion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: int64
+		formatString: \$#,0;-\$#,0;\$#,0
+		lineageTag: cb4dace6-1742-4c7b-8af5-2632dba64d21
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-CA"}
+
+	column 'Price Range'
+		dataType: string
+		lineageTag: 9eb2871b-cf8c-4ba0-bcf2-670176259166
+		summarizeBy: none
+		sourceColumn: Price Range
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		lineageTag: 52b4a634-6f29-4f54-9532-12dac6986eeb
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column Store
+		dataType: string
+		lineageTag: 8a46f252-a900-4362-b27c-07747ffc0b14
+		summarizeBy: none
+		sourceColumn: Store
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: string
+		lineageTag: 0ac58f2a-3f74-4442-8254-6cf1ece364c0
+		summarizeBy: none
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Customer-7e8cffbe-9644-4d2a-9653-8804b02c15eb = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("jxkt4xphz2.database.windows.net", "SalesReturnsSampleDec2019"),
+				    dbo_Customer = Source{[Schema="dbo",Item="Customer"]}[Data]
+				in
+				    #"dbo_Customer"
+
+	annotation PBI_QueryRelationships = {"columnCount":13,"keyColumnNames":[],"queryRelationships":[{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Section1/Issues and Promotions/Changed Type.{ID,0}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Section1/Sales/Changed Type.{ID,0}","KeyColumnCount":1}],"columnIdentities":["Section1/Customer/Changed Type.{ID,0}","Section1/Customer/Changed Type.{Unit,3}","Section1/Customer/Replaced Value1.{Gender,4}","Section1/Product/Changed Type.{Product,0}","Section1/Product/Changed Type.{Category,2}","Section1/Product/Changed Type.{Segment,4}","Section1/Product/Source.{Price Range,11}","Section1/Store/Changed Type.{Manufacturer,1}","Section1/Store/Changed Type.{Type,2}","Section1/Issues and Promotions/Changed Type.{Issue,1}","Section1/Issues and Promotions/Changed Type.{Promotion,2}","Section1/Sales/Inserted Multiplication.{Multiplication,9}","Section1/Age/Changed Type.{Age Bucket,1}"],"ColumnCount":13,"KeyColumnNames":[],"ColumnIdentities":["Section1/Customer/Changed Type.{ID,0}","Section1/Customer/Changed Type.{Unit,3}","Section1/Customer/Replaced Value1.{Gender,4}","Section1/Product/Changed Type.{Product,0}","Section1/Product/Changed Type.{Category,2}","Section1/Product/Changed Type.{Segment,4}","Section1/Product/Source.{Price Range,11}","Section1/Store/Changed Type.{Manufacturer,1}","Section1/Store/Changed Type.{Type,2}","Section1/Issues and Promotions/Changed Type.{Issue,1}","Section1/Issues and Promotions/Changed Type.{Promotion,2}","Section1/Sales/Inserted Multiplication.{Multiplication,9}","Section1/Age/Changed Type.{Age Bucket,1}"],"RelationshipInfo":[{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Section1/Issues and Promotions/Changed Type.{ID,0}","KeyColumnCount":1},{"keyColumnCount":1,"keyColumn":0,"otherKeyColumnIdentity":"Section1/Sales/Changed Type.{ID,0}","KeyColumnCount":1}]}
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

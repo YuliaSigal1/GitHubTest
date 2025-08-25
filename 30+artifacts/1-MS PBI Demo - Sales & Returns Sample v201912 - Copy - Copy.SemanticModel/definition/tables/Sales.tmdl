@@ -1,0 +1,80 @@
+table Sales
+	lineageTag: dfe11725-ed62-4ea6-b61b-a4bbdf0c1633
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3af04caf-06bf-48e5-b67b-c2166e4f8935
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreID
+		dataType: int64
+		formatString: 0
+		lineageTag: 460b5b3f-ce93-4327-9955-d073f18c6ea7
+		summarizeBy: none
+		sourceColumn: StoreID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 1f733763-aa00-4efe-ae06-8d4835c207f1
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: e1a68a72-4877-48d0-816d-3e4045468708
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unit
+		dataType: int64
+		formatString: 0
+		lineageTag: ee31fe4c-1a95-4192-9c08-75d6f4da4409
+		summarizeBy: sum
+		sourceColumn: Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 452d5fd2-5558-4286-aa96-f9980c57ec06
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: int64
+		formatString: 0
+		lineageTag: aaf85781-7711-4c81-a78b-2e3821dfa588
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sales-113fd51a-9d45-46f4-89f4-240116e9b48a = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("jxkt4xphz2.database.windows.net", "SalesReturnsSampleDec2019"),
+				    dbo_Sales = Source{[Schema="dbo",Item="Sales"]}[Data]
+				in
+				    #"dbo_Sales"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_QueryRelationships = {"columnCount":7,"keyColumnNames":[],"queryRelationships":[{"keyColumnCount":1,"keyColumn":1,"otherKeyColumnIdentity":"Section1/Product/Changed Type.{ProductID,1}","KeyColumnCount":1}],"columnIdentities":["Section1/Sales/Changed Type.{ID,0}","Section1/Sales/Changed Type.{ProductID,1}","Section1/Sales/Changed Type.{StoreID,2}","Section1/Sales/Changed Type.{Unit,3}","Section1/Sales/Changed Type.{Status,7}","Section1/Sales/Inserted Multiplication.{Multiplication,9}","Section1/Calendar/Changed Type1.{Date,0}"],"ColumnCount":7,"KeyColumnNames":[],"ColumnIdentities":["Section1/Sales/Changed Type.{ID,0}","Section1/Sales/Changed Type.{ProductID,1}","Section1/Sales/Changed Type.{StoreID,2}","Section1/Sales/Changed Type.{Unit,3}","Section1/Sales/Changed Type.{Status,7}","Section1/Sales/Inserted Multiplication.{Multiplication,9}","Section1/Calendar/Changed Type1.{Date,0}"],"RelationshipInfo":[{"keyColumnCount":1,"keyColumn":1,"otherKeyColumnIdentity":"Section1/Product/Changed Type.{ProductID,1}","KeyColumnCount":1}]}
+
+	annotation PBI_ResultType = Table
+

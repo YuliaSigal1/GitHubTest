@@ -1,0 +1,51 @@
+table 'Associated Product'
+	lineageTag: 970caf35-80d7-469c-92c5-3217c4f29899
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a4e4ebf-ae77-4ac4-825a-1a830dfbfaf0
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Image'
+		dataType: string
+		lineageTag: 6fab42be-2104-4ac5-8c24-b82628b3ff4d
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: Product Image
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product
+		dataType: string
+		lineageTag: 9e717a1b-61a1-486f-947f-469e67846655
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Segmented by' = "#ffffff"
+		lineageTag: 499c4c30-08b1-4b92-838a-058b52aa39de
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Associated Product-43c12c26-259f-4d24-934a-6f0ef46ee84e' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("ldRZb4JAEAfw78KzcZi9t2/W2Naj1mIPj/igqIgUKohH/fTdpgn7urwQQvILs7P/mfncQ6/h7crycLwDiNNlFN82RfPvZXPcLcOkGX6n5nukCQNUSoB4jMOo1zxkkbdozD3iyhFQM2iX/tvqqdLUVVNQVEvo58ktsJy51y4oJ9CN8mTUrzh3/zvVgkEsHtYdrLhwP7pA8wjWpwvfV1y6Fy+F1JAEcRG0K65qNN7nAkL6Lrv23rT72SWa1p1n3UnxVXH069w7UdDJsvQSW18jdspHCS013OYd651zR4Ci0kB7sdrb5qNz8gggckh/Xgq/a3mN5CkU8OEPR9uV5c7JQ2AoKezOvfZAW+8cPQKEMwW3oxy2fOtrZA8JkTC+5odka71z+CgwxXzI0uHs+WS9c/rM6FAzeVxdp/xml45z+ogZPVSw+jy2cmm9c/oIKKIF3HOcFtx65/SZ/jGN8DoWk/hgfY29h8rUv+7sB1lqfZ3Fx83anZTlfhD9+8Uv", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [ProductID = _t, #"Product Image" = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"ProductID", Int64.Type}, {"Product Image", type text}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"ProductID"}, Product, {"ProductID"}, "Product", JoinKind.LeftOuter),
+				    #"Expanded Product" = Table.ExpandTableColumn(#"Merged Queries", "Product", {"Product"}, {"Product.1"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded Product",{{"Product.1", "Product"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

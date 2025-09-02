@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "FamilyBM2M v3_1 - Copy (5)"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1e6bb430-878f-97ff-41a8-bdaad68ab235"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "evenstream_from_lakehouse"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "503cfc3d-4fdf-9f78-4f90-7a2870a183f1"
+  }
+}

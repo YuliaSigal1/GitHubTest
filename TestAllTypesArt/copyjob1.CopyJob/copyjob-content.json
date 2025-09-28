@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "jobMode": "Batch",
+    "source": {
+      "type": "ODataResource",
+      "connectionSettings": {
+        "type": "OData",
+        "externalReferences": {
+          "connection": "0dcbe505-3ad1-4c70-a163-42aa50af7fc2"
+        }
+      },
+      "additionalSettings": {
+        "protocolSettings": {}
+      }
+    },
+    "destination": {
+      "type": "DataWarehouseTable",
+      "connectionSettings": {
+        "type": "DataWarehouse",
+        "typeProperties": {
+          "workspaceId": "4fc0a151-466e-4201-9ab0-4a7c34b4eb2a",
+          "artifactId": "05bfe3f7-f5f8-4753-b59c-0fc98e7c1545",
+          "endPoint": "df7256xto7ge7pnkjb5zedfx5y-kgq4at3oiyaufgvqjj6djnhlfi.dxt-datawarehouse.fabric.microsoft.com"
+        },
+        "externalReferences": {
+          "connection": "2c716a68-a6fc-4ed1-b3c3-30f83bcb304a"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00"
+    }
+  },
+  "activities": [
+    {
+      "id": "6cd82c3e-26de-4ff0-a151-78a0f1b03c45",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "path": "Alphabetical_list_of_products"
+          },
+          "protocolSettings": {}
+        },
+        "destination": {
+          "tableOption": "autoCreate",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "Alphabetical_list_of_products"
+          }
+        },
+        "enableStaging": true
+      }
+    }
+  ]
+}

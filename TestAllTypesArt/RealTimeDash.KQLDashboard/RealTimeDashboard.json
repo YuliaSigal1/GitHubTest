@@ -1,0 +1,35 @@
+{
+  "autoRefresh": {
+    "enabled": false
+  },
+  "baseQueries": [],
+  "tiles": [],
+  "dataSources": [],
+  "pages": [
+    {
+      "name": "Page 1",
+      "id": "f4b680ed-5587-40f3-8a4d-dde0adbacd24"
+    }
+  ],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "9f48f58d-e567-4593-88c3-555e30077e82",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "queries": [],
+  "schema_version": 64,
+  "title": "RealTimeDash"
+}

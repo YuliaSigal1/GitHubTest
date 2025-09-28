@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "MetricSet",
+    "displayName": "MetricSet",
+    "description": ""
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "97fb0aff-13cb-9291-4ad5-8ef1a936720f"
+  }
+}

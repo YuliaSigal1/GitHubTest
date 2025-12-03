@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/valueSet/1.0.0/schema.json",
+  "name": "test2",
+  "variableOverrides": [
+    {
+      "name": "test",
+      "value": {
+        "itemId": "994732cf-b3c1-4512-9ea0-72caa4515c09",
+        "workspaceId": "f9c33da6-a7d9-43ff-b0e1-fbcf85044db7"
+      }
+    }
+  ]
+}

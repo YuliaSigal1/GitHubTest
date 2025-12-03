@@ -1,0 +1,155 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "90ec4afa36c929e225b3",
+  "position": {
+    "x": 680.06722689075639,
+    "y": -1.2100840336134455,
+    "z": 0,
+    "height": 361.81512605042019,
+    "width": 600.20168067226894
+  },
+  "visual": {
+    "visualType": "esriVisual",
+    "query": {
+      "queryState": {
+        "Location": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimGeography"
+                    }
+                  },
+                  "Property": "EnglishCountryRegionName"
+                }
+              },
+              "queryRef": "DimGeography.EnglishCountryRegionName"
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactInternetSales"
+                        }
+                      },
+                      "Property": "SalesAmount"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FactInternetSales.SalesAmount)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "FactInternetSales"
+                      }
+                    },
+                    "Property": "SalesAmount"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "mapObject": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"portalUrl\":\"https://www.arcgis.com\",\"version\":\"2.1\",\"isAuthorNamedUser\":false,\"map\":{\"webmap\":{\"item\":{\"extent\":[[-180,-68.96922647140022],[-138.86718750007856,79.00758601287109]]},\"itemData\":{\"operationalLayers\":[{\"id\":\"MyLayer\",\"visibility\":true,\"opacity\":1,\"minScale\":0,\"maxScale\":0,\"refreshInterval\":0,\"title\":\"EnglishCountryRegionName\",\"objectIdField\":\"objectId\",\"type\":\"DataLayer\",\"layerType\":\"ArcGISFeatureLayer\",\"popupEnabled\":true,\"disablePopup\":false,\"visible\":true,\"esriMaps\":{\"customProps\":null,\"isTimeEnabled\":\"false\",\"clusterInfo\":null,\"filteredRenderer\":null,\"lastShareInfo\":null},\"timeInfo\":null,\"showLabels\":true,\"featureCollection\":{\"layers\":[{\"popupInfo\":{\"popupElements\":[{\"type\":\"fields\",\"fieldInfos\":[{\"fieldName\":\"EnglishCountryRegionName\",\"label\":\"EnglishCountryRegionName\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"SalesAmount\",\"format\":{\"digitSeparator\":true,\"places\":2},\"label\":\"SalesAmount\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}]}],\"expressionInfos\":[],\"fieldInfos\":[{\"fieldName\":\"EnglishCountryRegionName\",\"label\":\"EnglishCountryRegionName\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"SalesAmount\",\"format\":{\"digitSeparator\":true,\"places\":2},\"label\":\"SalesAmount\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}],\"title\":\"\",\"actions\":[]},\"layerDefinition\":{\"name\":\"EnglishCountryRegionName\",\"objectIdField\":\"objectId\",\"fields\":[{\"alias\":\"objectId\",\"editable\":false,\"length\":-1,\"name\":\"objectId\",\"nullable\":false,\"type\":\"esriFieldTypeOID\"},{\"alias\":\"EnglishCountryRegionName\",\"editable\":true,\"length\":-1,\"name\":\"EnglishCountryRegionName\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"SalesAmount\",\"editable\":true,\"length\":-1,\"name\":\"SalesAmount\",\"nullable\":true,\"type\":\"esriFieldTypeDouble\"},{\"alias\":\"ROW_ID\",\"editable\":true,\"length\":-1,\"name\":\"ROW_ID\",\"nullable\":true,\"type\":\"esriFieldTypeInteger\"}],\"geometryType\":\"polygon\",\"drawingInfo\":{\"renderer\":{\"type\":\"simple\",\"visualVariables\":[],\"symbol\":{\"type\":\"esriSFS\",\"color\":[250,168,63,178],\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"},\"style\":\"esriSFSSolid\"}},\"labelingInfo\":[{\"labelExpression\":\"[objectId]\",\"labelExpressionInfo\":{\"expression\":\"$feature[\\\"objectId\\\"]\"},\"labelPlacement\":\"esriServerPointLabelPlacementAboveRight\",\"labelPosition\":\"curved\",\"repeatLabel\":true,\"symbol\":{\"type\":\"esriTS\",\"color\":[0,0,0,255],\"font\":{\"family\":\"Arial Unicode MS\",\"size\":12},\"horizontalAlignment\":\"center\",\"kerning\":true,\"rotated\":false,\"text\":\"\",\"verticalAlignment\":\"baseline\",\"xoffset\":0,\"yoffset\":0,\"angle\":0,\"lineWidth\":192,\"lineHeight\":1}}]},\"featureReduction\":null,\"type\":\"DataLayer\",\"minScale\":0,\"maxScale\":0,\"locationProvider\":{\"type\":\"cachedstdgeo\",\"adminLevel\":\"countries\",\"targetSR\":{\"latestWkid\":3857,\"wkid\":102100},\"useExactMatch\":false,\"sourceCountry\":\"world\",\"geographyLevel\":\"countries\",\"lookupFields\":[{\"lookupField\":\"Location\",\"outField\":\"EnglishCountryRegionName\"}]},\"queryParameters\":{\"tableId\":\"\",\"outFields\":[\"EnglishCountryRegionName\",\"SalesAmount\",\"ROW_ID\"]}},\"featureSet\":{\"geometryType\":\"polygon\",\"features\":[{\"geometry\":{\"rings\":[[0,0]],\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}]}}]}}],\"baseMap\":{\"baseMapLayers\":[{\"id\":\"VectorTile_8363\",\"title\":\"Light Gray Canvas Base\",\"layerType\":\"VectorTileLayer\",\"minScale\":0,\"maxScale\":0,\"styleUrl\":\"https://www.arcgis.com/sharing/rest/content/items/291da5eab3a0412593b66d384379f89f/resources/styles/root.json\"},{\"id\":\"VectorTile_9931\",\"title\":\"Light Gray Canvas Reference\",\"layerType\":\"VectorTileLayer\",\"minScale\":0,\"maxScale\":0,\"styleUrl\":\"https://www.arcgis.com/sharing/rest/content/items/1768e8369a214dfab4e2167d5c5f2454/resources/styles/root.json\",\"isReference\":true}],\"title\":\"Light Gray Canvas\"},\"version\":\"2.11\",\"authoringApp\":\"ArcGIS for Power BI\"}},\"webmapExtensions\":{\"mapDemographicsCardSettings\":{\"studyArea\":{\"radii\":[20],\"travel_mode\":\"ring\",\"units\":\"Miles\"},\"variables\":[]},\"layerJoinSettings\":[],\"basemapExtent\":{\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"xmin\":-21563802.923584346,\"ymin\":-10741234.063921336,\"xmax\":24616392.085175697,\"ymax\":14931823.500270687}}}}'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "locationType": [
+        {
+          "properties": {
+            "country": {
+              "expr": {
+                "Literal": {
+                  "Value": "'world'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ESRI Map'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'18'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

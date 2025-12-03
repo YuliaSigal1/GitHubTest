@@ -20,19 +20,9 @@ CREATE NONCLUSTERED INDEX [IX_Address_AddressLine1_AddressLine2_City_StateProvin
 
 
 GO
-ALTER INDEX [IX_Address_AddressLine1_AddressLine2_City_StateProvince_PostalCode_CountryRegion]
-    ON [SalesLT].[Address] DISABLE;
-
-
-GO
 
 CREATE NONCLUSTERED INDEX [IX_Address_StateProvince]
     ON [SalesLT].[Address]([StateProvince] ASC);
-
-
-GO
-ALTER INDEX [IX_Address_StateProvince]
-    ON [SalesLT].[Address] DISABLE;
 
 
 GO

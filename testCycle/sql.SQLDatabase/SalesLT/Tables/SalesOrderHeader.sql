@@ -34,50 +34,9 @@ CREATE TABLE [SalesLT].[SalesOrderHeader] (
 
 
 GO
-ALTER TABLE [SalesLT].[SalesOrderHeader] NOCHECK CONSTRAINT [CK_SalesOrderHeader_DueDate];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderHeader] NOCHECK CONSTRAINT [CK_SalesOrderHeader_Freight];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderHeader] NOCHECK CONSTRAINT [CK_SalesOrderHeader_ShipDate];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderHeader] NOCHECK CONSTRAINT [CK_SalesOrderHeader_Status];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderHeader] NOCHECK CONSTRAINT [CK_SalesOrderHeader_SubTotal];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderHeader] NOCHECK CONSTRAINT [CK_SalesOrderHeader_TaxAmt];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderHeader] NOCHECK CONSTRAINT [FK_SalesOrderHeader_Address_BillTo_AddressID];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderHeader] NOCHECK CONSTRAINT [FK_SalesOrderHeader_Address_ShipTo_AddressID];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderHeader] NOCHECK CONSTRAINT [FK_SalesOrderHeader_Customer_CustomerID];
-
-
-GO
 
 CREATE NONCLUSTERED INDEX [IX_SalesOrderHeader_CustomerID]
     ON [SalesLT].[SalesOrderHeader]([CustomerID] ASC);
-
-
-GO
-ALTER INDEX [IX_SalesOrderHeader_CustomerID]
-    ON [SalesLT].[SalesOrderHeader] DISABLE;
 
 
 GO

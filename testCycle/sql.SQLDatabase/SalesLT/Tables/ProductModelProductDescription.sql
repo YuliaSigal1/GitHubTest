@@ -12,12 +12,4 @@ CREATE TABLE [SalesLT].[ProductModelProductDescription] (
 
 
 GO
-ALTER TABLE [SalesLT].[ProductModelProductDescription] NOCHECK CONSTRAINT [FK_ProductModelProductDescription_ProductDescription_ProductDescriptionID];
-
-
-GO
-ALTER TABLE [SalesLT].[ProductModelProductDescription] NOCHECK CONSTRAINT [FK_ProductModelProductDescription_ProductModel_ProductModelID];
-
-
-GO
 

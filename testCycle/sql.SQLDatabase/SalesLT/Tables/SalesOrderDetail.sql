@@ -18,34 +18,9 @@ CREATE TABLE [SalesLT].[SalesOrderDetail] (
 
 
 GO
-ALTER TABLE [SalesLT].[SalesOrderDetail] NOCHECK CONSTRAINT [CK_SalesOrderDetail_OrderQty];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderDetail] NOCHECK CONSTRAINT [CK_SalesOrderDetail_UnitPrice];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderDetail] NOCHECK CONSTRAINT [CK_SalesOrderDetail_UnitPriceDiscount];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderDetail] NOCHECK CONSTRAINT [FK_SalesOrderDetail_Product_ProductID];
-
-
-GO
-ALTER TABLE [SalesLT].[SalesOrderDetail] NOCHECK CONSTRAINT [FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID];
-
-
-GO
 
 CREATE NONCLUSTERED INDEX [IX_SalesOrderDetail_ProductID]
     ON [SalesLT].[SalesOrderDetail]([ProductID] ASC);
-
-
-GO
-ALTER INDEX [IX_SalesOrderDetail_ProductID]
-    ON [SalesLT].[SalesOrderDetail] DISABLE;
 
 
 GO

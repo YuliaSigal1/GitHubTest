@@ -30,28 +30,4 @@ CREATE TABLE [SalesLT].[Product] (
 
 
 GO
-ALTER TABLE [SalesLT].[Product] NOCHECK CONSTRAINT [CK_Product_ListPrice];
-
-
-GO
-ALTER TABLE [SalesLT].[Product] NOCHECK CONSTRAINT [CK_Product_SellEndDate];
-
-
-GO
-ALTER TABLE [SalesLT].[Product] NOCHECK CONSTRAINT [CK_Product_StandardCost];
-
-
-GO
-ALTER TABLE [SalesLT].[Product] NOCHECK CONSTRAINT [CK_Product_Weight];
-
-
-GO
-ALTER TABLE [SalesLT].[Product] NOCHECK CONSTRAINT [FK_Product_ProductCategory_ProductCategoryID];
-
-
-GO
-ALTER TABLE [SalesLT].[Product] NOCHECK CONSTRAINT [FK_Product_ProductModel_ProductModelID];
-
-
-GO
 

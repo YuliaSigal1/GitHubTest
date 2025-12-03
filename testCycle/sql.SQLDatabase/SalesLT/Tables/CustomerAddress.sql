@@ -12,12 +12,4 @@ CREATE TABLE [SalesLT].[CustomerAddress] (
 
 
 GO
-ALTER TABLE [SalesLT].[CustomerAddress] NOCHECK CONSTRAINT [FK_CustomerAddress_Address_AddressID];
-
-
-GO
-ALTER TABLE [SalesLT].[CustomerAddress] NOCHECK CONSTRAINT [FK_CustomerAddress_Customer_CustomerID];
-
-
-GO
 

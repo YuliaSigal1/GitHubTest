@@ -26,9 +26,4 @@ CREATE NONCLUSTERED INDEX [IX_Customer_EmailAddress]
 
 
 GO
-ALTER INDEX [IX_Customer_EmailAddress]
-    ON [SalesLT].[Customer] DISABLE;
-
-
-GO
 

@@ -12,8 +12,4 @@ CREATE TABLE [SalesLT].[ProductCategory] (
 
 
 GO
-ALTER TABLE [SalesLT].[ProductCategory] NOCHECK CONSTRAINT [FK_ProductCategory_ProductCategory_ParentProductCategoryID_ProductCategoryID];
-
-
-GO
 

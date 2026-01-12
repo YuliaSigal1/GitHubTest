@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Org.CiCdWorkloadSample.HelloWorld",
+    "displayName": "test3p"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fb631041-beca-a350-41de-ab02c593a786"
+  }
+}

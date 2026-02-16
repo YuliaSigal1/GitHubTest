@@ -1,0 +1,76 @@
+{
+  "properties": {
+    "jobMode": "Batch",
+    "source": {
+      "type": "ODataResource",
+      "connectionSettings": {
+        "type": "OData",
+        "externalReferences": {
+          "connection": "5bfa660f-37a7-471e-825a-baae28998f99"
+        }
+      },
+      "additionalSettings": {
+        "protocolSettings": {}
+      }
+    },
+    "destination": {
+      "type": "FabricSqlDatabaseTable",
+      "connectionSettings": {
+        "type": "FabricSqlDatabase",
+        "typeProperties": {
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "artifactId": "4780ce17-937b-8a19-4618-5c33ce9fd18f"
+        },
+        "externalReferences": {
+          "connection": "b8edfdb1-8fed-4f96-8215-05540c2a3a37"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00",
+      "retry": 0
+    }
+  },
+  "activities": [
+    {
+      "id": "bf424084-f0d5-43ad-9945-b81f5da712e2",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "path": "Categories"
+          },
+          "protocolSettings": {}
+        },
+        "destination": {
+          "tableOption": "autoCreate",
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "Categories"
+          }
+        },
+        "enableStaging": false
+      }
+    },
+    {
+      "id": "8d25b08b-b476-40d4-a763-091945ffa9b2",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "path": "Category_Sales_for_1997"
+          },
+          "protocolSettings": {}
+        },
+        "destination": {
+          "tableOption": "autoCreate",
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "Category_Sales_for_1997"
+          }
+        },
+        "enableStaging": false
+      }
+    }
+  ]
+}

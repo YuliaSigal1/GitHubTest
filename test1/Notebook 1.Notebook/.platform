@@ -1,11 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "SemanticModel",
-    "displayName": "ParamsUsageV3"
+    "type": "Notebook",
+    "displayName": "Notebook 1",
+    "description": "New notebook"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "f744c04d-7fae-9095-48b4-bdd64d2e9399"
+    "logicalId": "592e9c22-f981-bda6-4aa2-b894ea3d497c"
   }
 }

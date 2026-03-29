@@ -22,17 +22,6 @@
           "type": "BaseTheme"
         }
       ]
-    },
-    {
-      "name": "RegisteredResources",
-      "type": "RegisteredResources",
-      "items": [
-        {
-          "name": "Capture156546247516254.JPG",
-          "path": "Capture156546247516254.JPG",
-          "type": "Image"
-        }
-      ]
     }
   ],
   "settings": {

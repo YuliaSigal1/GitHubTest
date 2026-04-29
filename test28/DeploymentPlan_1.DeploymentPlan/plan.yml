@@ -1,5 +1,3 @@
 $schema: https://developer.microsoft.com/json-schemas/fabric/item/deploymentPlan/definition/plan/1.0.0/schema.json
 version: 1.0.0
-sets:
-  - name: Pipeline_1_Pipeline
-    itemId: b2ea1d52-0fd0-4790-96cf-140309d824a0
+sets: []

@@ -1,0 +1,5 @@
+$schema: https://developer.microsoft.com/json-schemas/fabric/item/deploymentPlan/definition/plan/1.0.0/schema.json
+version: 1.0.0
+sets:
+  - name: Test1Rename_Lakehouse
+    itemId: a57dd34d-4c7d-4c54-b99d-a98ebe99b60b

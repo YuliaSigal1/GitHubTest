@@ -3,6 +3,7 @@
   "objectTypes": [
     {
       "name": "Shortcuts",
+      "state": "Enabled",
       "subObjectTypes": [
         {
           "name": "Shortcuts.OneLake",
@@ -28,8 +29,7 @@
           "name": "Shortcuts.GoogleCloudStorage",
           "state": "Enabled"
         }
-      ],
-      "state": "Enabled"
+      ]
     },
     {
       "name": "DataAccessRoles",

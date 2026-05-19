@@ -1,0 +1,182 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "ODataSource",
+            "datasetSettings": {
+              "type": "ODataResource",
+              "typeProperties": {
+                "path": "Alphabetical_list_of_products"
+              },
+              "schema": [],
+              "externalReferences": {
+                "connection": "5bfa660f-37a7-471e-825a-baae28998f99"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "FabricSqlDatabaseSink",
+            "tableOption": "autoCreate",
+            "datasetSettings": {
+              "type": "FabricSqlDatabaseTable",
+              "typeProperties": {
+                "schema": "dbo",
+                "table": "Alphabetical_list_of_products"
+              },
+              "schema": [],
+              "connectionSettings": {
+                "name": "sql",
+                "properties": {
+                  "type": "FabricSqlDatabase",
+                  "typeProperties": {
+                    "artifactId": "2d890348-2ad8-b3fc-433f-fdc2043d60bd",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000"
+                  },
+                  "externalReferences": {
+                    "connection": "b8edfdb1-8fed-4f96-8215-05540c2a3a37"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "mappings": [
+              {
+                "source": {
+                  "name": "ProductID",
+                  "type": "Int32"
+                },
+                "sink": {
+                  "name": "ProductID",
+                  "physicalType": "int"
+                }
+              },
+              {
+                "source": {
+                  "name": "ProductName",
+                  "type": "String"
+                },
+                "sink": {
+                  "name": "ProductName",
+                  "physicalType": "nvarchar",
+                  "length": "MAX"
+                }
+              },
+              {
+                "source": {
+                  "name": "SupplierID",
+                  "type": "Int32"
+                },
+                "sink": {
+                  "name": "SupplierID",
+                  "physicalType": "int"
+                }
+              },
+              {
+                "source": {
+                  "name": "CategoryID",
+                  "type": "Int32"
+                },
+                "sink": {
+                  "name": "CategoryID",
+                  "physicalType": "int"
+                }
+              },
+              {
+                "source": {
+                  "name": "QuantityPerUnit",
+                  "type": "String"
+                },
+                "sink": {
+                  "name": "QuantityPerUnit",
+                  "physicalType": "nvarchar",
+                  "length": "MAX"
+                }
+              },
+              {
+                "source": {
+                  "name": "UnitPrice",
+                  "type": "Decimal"
+                },
+                "sink": {
+                  "name": "UnitPrice",
+                  "physicalType": "decimal",
+                  "scale": 18,
+                  "precision": 38
+                }
+              },
+              {
+                "source": {
+                  "name": "UnitsInStock",
+                  "type": "Int16"
+                },
+                "sink": {
+                  "name": "UnitsInStock",
+                  "physicalType": "smallint"
+                }
+              },
+              {
+                "source": {
+                  "name": "UnitsOnOrder",
+                  "type": "Int16"
+                },
+                "sink": {
+                  "name": "UnitsOnOrder",
+                  "physicalType": "smallint"
+                }
+              },
+              {
+                "source": {
+                  "name": "ReorderLevel",
+                  "type": "Int16"
+                },
+                "sink": {
+                  "name": "ReorderLevel",
+                  "physicalType": "smallint"
+                }
+              },
+              {
+                "source": {
+                  "name": "Discontinued",
+                  "type": "Boolean"
+                },
+                "sink": {
+                  "name": "Discontinued",
+                  "physicalType": "bit"
+                }
+              },
+              {
+                "source": {
+                  "name": "CategoryName",
+                  "type": "String"
+                },
+                "sink": {
+                  "name": "CategoryName",
+                  "physicalType": "nvarchar",
+                  "length": "MAX"
+                }
+              }
+            ]
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Copy_ntj",
+        "dependsOn": []
+      }
+    ]
+  }
+}

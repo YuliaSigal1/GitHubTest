@@ -2,11 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "Lakehouse",
-    "displayName": "Lkh",
-    "description": "666666666666666666666666"
+    "displayName": "lkhTestConflict"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "2b2926b8-54e1-8e0e-477e-f2669ac75d81"
+    "logicalId": "280fbcb8-e988-9415-4165-10981569ac58"
   }
 }

@@ -1,0 +1,10 @@
+$schema: https://developer.microsoft.com/json-schemas/fabric/item/deploymentPlan/definition/plan/1.0.0/schema.json
+version: 1.0.0
+sets:
+  - name: Notebook_1_SynapseNotebook
+    itemId: fd972bf7-6b90-a29f-4c0b-c198e3459596
+    preSteps:
+      - name: Pipeline_1_Pipeline
+        job:
+          type: Execute
+          itemId: ce16c120-b5bc-9675-4fe4-1ce01f5a3da3

@@ -1,0 +1,10 @@
+$schema: https://developer.microsoft.com/json-schemas/fabric/item/deploymentPlan/definition/plan/1.0.0/schema.json
+version: 1.0.0
+sets:
+  - name: lk_Lakehouse
+    itemId: 1b8a9ee9-674c-9b37-4439-603e84699bbb
+    postSteps:
+      - name: Notebook_2ChangeFromGit355555555_SynapseNotebook
+        job:
+          type: Execute
+          itemId: 2aba4dae-3817-9f4c-4a0d-2f0de7da40e0

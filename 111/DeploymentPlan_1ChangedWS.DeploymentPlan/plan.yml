@@ -1,0 +1,10 @@
+$schema: https://developer.microsoft.com/json-schemas/fabric/item/deploymentPlan/definition/plan/1.0.0/schema.json
+version: 1.0.0
+sets:
+  - name: Variables_1_Variables44444444444
+    itemId: 42ba0142-42e2-a640-4689-469295b643f1
+    preSteps:
+      - name: Notebook_1_SynapseNotebook
+        job:
+          type: Execute
+          itemId: 39587abb-df6c-aa20-4d62-49c878815ed9

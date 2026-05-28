@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DeploymentPlan",
+    "displayName": "DeploymentPlan_1ChangedWS"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "90fb31df-43ec-8e9b-4172-dd6a54a40b2d"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/variables/1.0.0/schema.json",
+  "variables": [
+    {
+      "name": "test",
+      "note": "",
+      "type": "String",
+      "value": "hello!"
+    },
+    {
+      "name": "test2",
+      "note": "",
+      "type": "Integer",
+      "value": 34567
+    },
+    {
+      "name": "test3",
+      "note": "",
+      "type": "String",
+      "value": "456"
+    }
+  ]
+}
